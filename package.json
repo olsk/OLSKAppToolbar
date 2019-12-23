@@ -1,5 +1,6 @@
 {
   "name": "OLSKAppToolbar",
+  "main": "main.svelte",
   "dependencies": {
     "// TOOLBAR": null,
     "OLSKToolbar": "olsk/OLSKToolbar",
