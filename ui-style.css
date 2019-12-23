@@ -1,0 +1,41 @@
+.OLSKAppToolbar {
+	border-top: var(--OLSKAppBorderStyle);
+	
+	/* AppContainerFlexbox:Child */
+	flex-shrink: 0;
+
+	/* OLSKAppToolbarFlexbox:Parent */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.OLSKAppToolbar a {
+	color: inherit;
+}
+
+.OLSKAppToolbar :global(.OLSKToolbar) {
+	flex-grow: 1;
+}
+
+.OLSKAppToolbar :global(.OLSKToolbar > div) {
+	display: flex;
+	align-items: center;
+}
+
+.OLSKAppToolbar :global(.OLSKToolbarElementGroup > *:not(:first-child)) {
+	margin-left: 10px;
+}
+
+.OLSKAppToolbar:global(.OLSKLanguageSwitcher span) {
+	/* browser quirks */
+	padding-left: 4px;
+}
+
+.OLSKAppToolbarStorageButton.OSWIconVisible .OLSKAppToolbarStorageButtonImage {
+	display: none;
+}
+
+.OLSKAppToolbarStorageButton :global(.OSWOptionImage path) {
+	fill: black;
+}

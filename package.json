@@ -1,0 +1,22 @@
+{
+  "name": "OLSKAppToolbar",
+  "scripts": {
+    "postinstall": "node ./package-postinstall.js",
+  },
+  "dependencies": {
+    "// TOOLBAR": null,
+    "OLSKToolbar": "olsk/OLSKToolbar",
+    "OLSKToolbarElementGroup": "olsk/OLSKToolbarElementGroup",
+    
+    "// RELOAD BUTTON": null,
+    "OLSKReloadButton": "olsk/OLSKReloadButton",
+    
+    "// LANGUAGE SWITCHER": null,
+    "OLSKLanguageSwitcher": "olsk/OLSKLanguageSwitcher",
+    
+    "// ASSETS": null,
+    "OLSKUIAssets": "olsk/OLSKUIAssets",
+
+    "// I sacrifice myself for the commas of others": null
+  }
+}
