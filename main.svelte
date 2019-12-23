@@ -36,9 +36,9 @@ const mod = {
 
 import OLSKToolbar from 'OLSKToolbar';
 import OLSKToolbarElementGroup from 'OLSKToolbarElementGroup';
-import OLSKReloadButton from '../../../_shared/__external/OLSKReloadButton/main.svelte';
-import OLSKLanguageSwitcher from '../../../_shared/__external/OLSKLanguageSwitcher/main.svelte';
-import _OLSKSharedCloud from '../../../_shared/__external/OLSKUIAssets/_OLSKSharedCloud.svg';
+import OLSKReloadButton from '../OLSKReloadButton/main.svelte';
+import OLSKLanguageSwitcher from '../OLSKLanguageSwitcher/main.svelte';
+import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
 </script>
 
 <footer class="OLSKAppToolbar">
