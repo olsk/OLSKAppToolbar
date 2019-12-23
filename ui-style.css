@@ -27,7 +27,7 @@
 	margin-left: 10px;
 }
 
-.OLSKAppToolbar:global(.OLSKLanguageSwitcher span) {
+.OLSKAppToolbar :global(.OLSKLanguageSwitcher span) {
 	/* browser quirks */
 	padding-left: 4px;
 }
