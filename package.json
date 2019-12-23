@@ -1,7 +1,7 @@
 {
   "name": "OLSKAppToolbar",
   "scripts": {
-    "postinstall": "node ./package-postinstall.js",
+    "postinstall": "node ./package-postinstall.js"
   },
   "dependencies": {
     "// TOOLBAR": null,
