@@ -3,6 +3,9 @@ import RollupStart from './main.svelte';
 const OLSKAppToolbar = new RollupStart({
 	target: document.body,
 	props: Object.assign({
+		OLSKAppToolbarDispatchLauncher: (function _OLSKAppToolbarDispatchLauncher () {
+			window.TestOLSKAppToolbarDispatchLauncher.innerHTML = parseInt(window.TestOLSKAppToolbarDispatchLauncher.innerHTML) + 1;
+		}),
 		OLSKAppToolbarDispatchStorage: (function _OLSKAppToolbarDispatchStorage () {
 			window.TestOLSKAppToolbarDispatchStorage.innerHTML = parseInt(window.TestOLSKAppToolbarDispatchStorage.innerHTML) + 1;
 		}),

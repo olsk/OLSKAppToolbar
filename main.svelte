@@ -2,6 +2,8 @@
 export let OLSKAppToolbarGuideURL = '';
 export let OLSKAppToolbarDonateURL = '';
 export let OLSKAppToolbarStorageStatus = '';
+export let OLSKAppToolbarLauncherVisible = false;
+export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
 export let _OLSKAppToolbarDispatchExport;
 export let _OLSKAppToolbarDispatchImport;
@@ -36,9 +38,10 @@ const mod = {
 
 import OLSKToolbar from 'OLSKToolbar';
 import OLSKToolbarElementGroup from 'OLSKToolbarElementGroup';
-import OLSKReloadButton from '../OLSKReloadButton/main.svelte';
-import OLSKLanguageSwitcher from '../OLSKLanguageSwitcher/main.svelte';
-import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
+import OLSKReloadButton from '../__external/OLSKReloadButton/main.svelte';
+import OLSKLanguageSwitcher from '../__external/OLSKLanguageSwitcher/main.svelte';
+import _OLSKSharedCloud from '../__external/OLSKUIAssets/_OLSKSharedCloud.svg';
+import _OLSKSharedLauncher from '../__external/OLSKUIAssets/_OLSKSharedLauncher.svg';
 </script>
 
 <footer class="OLSKAppToolbar">
@@ -66,6 +69,12 @@ import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
 		</OLSKToolbarElementGroup>
 
 		<OLSKToolbarElementGroup>
+			{#if OLSKAppToolbarLauncherVisible}
+				<button class="OLSKAppToolbarLauncherButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher } class:OSWIconVisible={ false }>
+					<div class="OLSKAppToolbarLauncherButtonImage">{@html _OLSKSharedLauncher }</div>
+				</button>
+			{/if}
+
 			<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
 			
 			<button class="OLSKAppToolbarStorageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage } class:OSWIconVisible={ false }>

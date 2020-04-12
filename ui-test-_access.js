@@ -6,6 +6,9 @@ Object.entries({
 	OLSKAppToolbarGuideLink: '.OLSKAppToolbarGuideLink',
 	
 	OLSKAppToolbarDonateLink: '.OLSKAppToolbarDonateLink',
+
+	OLSKAppToolbarLauncherButton: '.OLSKAppToolbarLauncherButton',
+	OLSKAppToolbarLauncherButtonImage: '.OLSKAppToolbarLauncherButtonImage',
 	
 	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
 	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
@@ -38,6 +41,10 @@ describe('OLSKAppToolbar_Access', function () {
 
 	it('hides OLSKAppToolbarDonateLink', function () {
 		browser.assert.elements(OLSKAppToolbarDonateLink, 0);
+	});
+
+	it('hides OLSKAppToolbarLauncherButton', function () {
+		browser.assert.elements(OLSKAppToolbarLauncherButton, 0);
 	});
 
 	it('shows OLSKAppToolbarStorageStatus', function () {
@@ -76,6 +83,24 @@ describe('OLSKAppToolbar_Access', function () {
 
 		it('shows OLSKAppToolbarDonateLink', function () {
 			browser.assert.elements(OLSKAppToolbarDonateLink, 1);
+		});
+	
+	});
+
+	context('OLSKAppToolbarLauncherVisible', function () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				OLSKAppToolbarLauncherVisible: true,
+			});
+		});
+
+		it('shows OLSKAppToolbarLauncherButton', function () {
+			browser.assert.elements(OLSKAppToolbarLauncherButton, 1);
+		});
+
+		it('shows OLSKAppToolbarLauncherButtonImage', function () {
+			browser.assert.elements(OLSKAppToolbarLauncherButtonImage, 1);
 		});
 	
 	});

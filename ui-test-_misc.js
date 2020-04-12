@@ -7,6 +7,7 @@ describe('OLSKAppToolbar_Misc', function () {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKAppToolbarGuideURL: 'alfa',
 			OLSKAppToolbarDonateURL: 'bravo',
+			OLSKAppToolbarLauncherVisible: true,
 		});
 	});
 
@@ -30,6 +31,46 @@ describe('OLSKAppToolbar_Misc', function () {
 
 		it('sets target', function () {
 			browser.assert.attribute(OLSKAppToolbarDonateLink, 'target', '_blank');
+		});
+
+	});
+
+	describe('OLSKAppToolbarLauncherButton', function testOLSKAppToolbarLauncherButton () {
+
+		it('classes OLSKLayoutButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKLayoutButtonNoStyle');
+		});
+
+		it('classes OLSKLayoutElementTappable', function () {
+			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKLayoutElementTappable');
+		});
+
+		it('classes OLSKToolbarButton', function () {
+			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKToolbarButton');
+		});
+	
+		context('click', function () {
+
+			before(function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
+			});
+
+			before(function () {
+				browser.click(OLSKAppToolbarLauncherButton);
+			});
+	
+			it('sends OLSKAppToolbarDispatchLauncher', function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
+			});
+	
+		});
+
+	});
+
+	describe('OLSKAppToolbarLauncherButtonImage', function testOLSKAppToolbarLauncherButtonImage () {
+	
+		it('sets src', function () {
+			browser.assert.elements(`${ OLSKAppToolbarLauncherButtonImage } #_OLSKSharedLauncher`, 1);
 		});
 
 	});
