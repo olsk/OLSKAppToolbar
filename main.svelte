@@ -38,10 +38,10 @@ const mod = {
 
 import OLSKToolbar from 'OLSKToolbar';
 import OLSKToolbarElementGroup from 'OLSKToolbarElementGroup';
-import OLSKReloadButton from '../__external/OLSKReloadButton/main.svelte';
-import OLSKLanguageSwitcher from '../__external/OLSKLanguageSwitcher/main.svelte';
-import _OLSKSharedCloud from '../__external/OLSKUIAssets/_OLSKSharedCloud.svg';
-import _OLSKSharedLauncher from '../__external/OLSKUIAssets/_OLSKSharedLauncher.svg';
+import OLSKReloadButton from '../OLSKReloadButton/main.svelte';
+import OLSKLanguageSwitcher from '../OLSKLanguageSwitcher/main.svelte';
+import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
+import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 </script>
 
 <footer class="OLSKAppToolbar">
