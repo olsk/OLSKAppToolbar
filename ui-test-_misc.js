@@ -11,7 +11,7 @@ describe('OLSKAppToolbar_Misc', function () {
 		});
 	});
 
-	describe('OLSKAppToolbarGuideLink', function testOLSKAppToolbarGuideLink () {
+	describe('OLSKAppToolbarGuideLink', function test_OLSKAppToolbarGuideLink () {
 
 		it('sets href', function () {
 			browser.assert.attribute(OLSKAppToolbarGuideLink, 'href', 'alfa');
@@ -23,7 +23,7 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarDonateLink', function testOLSKAppToolbarDonateLink () {
+	describe('OLSKAppToolbarDonateLink', function test_OLSKAppToolbarDonateLink () {
 
 		it('sets href', function () {
 			browser.assert.attribute(OLSKAppToolbarDonateLink, 'href', 'bravo');
@@ -35,7 +35,7 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarLauncherButton', function testOLSKAppToolbarLauncherButton () {
+	describe('OLSKAppToolbarLauncherButton', function test_OLSKAppToolbarLauncherButton () {
 
 		it('classes OLSKLayoutButtonNoStyle', function () {
 			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKLayoutButtonNoStyle');
@@ -67,7 +67,7 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarLauncherButtonImage', function testOLSKAppToolbarLauncherButtonImage () {
+	describe('OLSKAppToolbarLauncherButtonImage', function test_OLSKAppToolbarLauncherButtonImage () {
 	
 		it('sets src', function () {
 			browser.assert.elements(`${ OLSKAppToolbarLauncherButtonImage } #_OLSKSharedLauncher`, 1);
@@ -75,7 +75,7 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarStorageStatus', function testOLSKAppToolbarStorageStatus () {
+	describe('OLSKAppToolbarStorageStatus', function test_OLSKAppToolbarStorageStatus () {
 
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
@@ -89,7 +89,7 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarStorageButton', function testOLSKAppToolbarStorageButton () {
+	describe('OLSKAppToolbarStorageButton', function test_OLSKAppToolbarStorageButton () {
 
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute);
@@ -125,7 +125,7 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarStorageButtonImage', function testOLSKAppToolbarStorageButtonImage () {
+	describe('OLSKAppToolbarStorageButtonImage', function test_OLSKAppToolbarStorageButtonImage () {
 
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute);
