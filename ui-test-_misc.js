@@ -7,6 +7,7 @@ describe('OLSKAppToolbar_Misc', function () {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKAppToolbarGuideURL: 'alfa',
 			OLSKAppToolbarDonateURL: 'bravo',
+			OLSKAppToolbarStorageStatus: 'alfa',
 			OLSKAppToolbarLauncherVisible: true,
 		});
 	});
@@ -31,6 +32,54 @@ describe('OLSKAppToolbar_Misc', function () {
 
 		it('sets target', function () {
 			browser.assert.attribute(OLSKAppToolbarDonateLink, 'target', '_blank');
+		});
+
+	});
+
+	describe('OLSKAppToolbarStorageButton', function test_OLSKAppToolbarStorageButton () {
+
+		it('classes OLSKLayoutButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKLayoutButtonNoStyle');
+		});
+
+		it('classes OLSKLayoutElementTappable', function () {
+			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKLayoutElementTappable');
+		});
+
+		it('classes OLSKToolbarButton', function () {
+			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKToolbarButton');
+		});
+	
+		context('click', function () {
+
+			before(function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchStorage', '0');
+			});
+
+			before(function () {
+				browser.click(OLSKAppToolbarStorageButton);
+			});
+	
+			it('sends OLSKAppToolbarDispatchStorage', function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchStorage', '1');
+			});
+	
+		});
+
+	});
+
+	describe('OLSKAppToolbarStorageButtonImage', function test_OLSKAppToolbarStorageButtonImage () {
+
+		it('sets src', function () {
+			browser.assert.elements(`${ OLSKAppToolbarStorageButtonImage } #_OLSKSharedCloud`, 1);
+		});
+
+	});
+
+	describe('OLSKAppToolbarStorageStatus', function test_OLSKAppToolbarStorageStatus () {
+
+		it('binds OLSKAppToolbarStorageStatus', function () {
+			browser.assert.text(OLSKAppToolbarStorageStatus, 'alfa');
 		});
 
 	});
@@ -71,68 +120,6 @@ describe('OLSKAppToolbar_Misc', function () {
 	
 		it('sets src', function () {
 			browser.assert.elements(`${ OLSKAppToolbarLauncherButtonImage } #_OLSKSharedLauncher`, 1);
-		});
-
-	});
-
-	describe('OLSKAppToolbarStorageStatus', function test_OLSKAppToolbarStorageStatus () {
-
-		before(function() {
-			return browser.OLSKVisit(kDefaultRoute, {
-				OLSKAppToolbarStorageStatus: 'alfa',
-			});
-		});
-
-		it('sets text', function () {
-			browser.assert.text(OLSKAppToolbarStorageStatus, 'alfa');
-		});
-
-	});
-
-	describe('OLSKAppToolbarStorageButton', function test_OLSKAppToolbarStorageButton () {
-
-		before(function() {
-			return browser.OLSKVisit(kDefaultRoute);
-		});
-
-		it('classes OLSKLayoutButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKLayoutButtonNoStyle');
-		});
-
-		it('classes OLSKLayoutElementTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKLayoutElementTappable');
-		});
-
-		it('classes OLSKToolbarButton', function () {
-			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKToolbarButton');
-		});
-	
-		context('click', function () {
-
-			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchStorage', '0');
-			});
-
-			before(function () {
-				browser.click(OLSKAppToolbarStorageButton);
-			});
-	
-			it('sends OLSKAppToolbarDispatchStorage', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchStorage', '1');
-			});
-	
-		});
-
-	});
-
-	describe('OLSKAppToolbarStorageButtonImage', function test_OLSKAppToolbarStorageButtonImage () {
-
-		before(function() {
-			return browser.OLSKVisit(kDefaultRoute);
-		});
-	
-		it('sets src', function () {
-			browser.assert.elements(`${ OLSKAppToolbarStorageButtonImage } #_OLSKSharedCloud`, 1);
 		});
 
 	});

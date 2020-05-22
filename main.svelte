@@ -1,8 +1,8 @@
 <script>
 export let OLSKAppToolbarGuideURL = '';
 export let OLSKAppToolbarDonateURL = '';
-export let OLSKAppToolbarStorageStatus = '';
 export let OLSKAppToolbarLauncherVisible = false;
+export let OLSKAppToolbarStorageStatus = '';
 export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
 export let _OLSKAppToolbarDispatchExport;
@@ -69,17 +69,17 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 		</OLSKToolbarElementGroup>
 
 		<OLSKToolbarElementGroup>
+			<button class="OLSKAppToolbarStorageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage } class:OSWIconVisible={ false }>
+				<div class="OLSKAppToolbarStorageButtonImage">{@html _OLSKSharedCloud }</div>
+			</button>
+
+			<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
+
 			{#if OLSKAppToolbarLauncherVisible}
 				<button class="OLSKAppToolbarLauncherButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher } class:OSWIconVisible={ false }>
 					<div class="OLSKAppToolbarLauncherButtonImage">{@html _OLSKSharedLauncher }</div>
 				</button>
 			{/if}
-
-			<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
-			
-			<button class="OLSKAppToolbarStorageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage } class:OSWIconVisible={ false }>
-				<div class="OLSKAppToolbarStorageButtonImage">{@html _OLSKSharedCloud }</div>
-			</button>
 		</OLSKToolbarElementGroup>
 	</OLSKToolbar>
 	

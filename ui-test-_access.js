@@ -6,13 +6,13 @@ Object.entries({
 	OLSKAppToolbarGuideLink: '.OLSKAppToolbarGuideLink',
 	
 	OLSKAppToolbarDonateLink: '.OLSKAppToolbarDonateLink',
+	
+	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
+	OLSKAppToolbarStorageButtonImage: '.OLSKAppToolbarStorageButtonImage',
+	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
 
 	OLSKAppToolbarLauncherButton: '.OLSKAppToolbarLauncherButton',
 	OLSKAppToolbarLauncherButtonImage: '.OLSKAppToolbarLauncherButtonImage',
-	
-	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
-	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
-	OLSKAppToolbarStorageButtonImage: '.OLSKAppToolbarStorageButtonImage',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -43,20 +43,20 @@ describe('OLSKAppToolbar_Access', function () {
 		browser.assert.elements(OLSKAppToolbarDonateLink, 0);
 	});
 
-	it('hides OLSKAppToolbarLauncherButton', function () {
-		browser.assert.elements(OLSKAppToolbarLauncherButton, 0);
-	});
-
-	it('shows OLSKAppToolbarStorageStatus', function () {
-		browser.assert.elements(OLSKAppToolbarStorageStatus, 1);
-	});
-
 	it('shows OLSKAppToolbarStorageButton', function () {
 		browser.assert.elements(OLSKAppToolbarStorageButton, 1);
 	});
 
 	it('shows OLSKAppToolbarStorageButtonImage', function () {
 		browser.assert.elements(OLSKAppToolbarStorageButtonImage, 1);
+	});
+
+	it('shows OLSKAppToolbarStorageStatus', function () {
+		browser.assert.elements(OLSKAppToolbarStorageStatus, 1);
+	});
+
+	it('hides OLSKAppToolbarLauncherButton', function () {
+		browser.assert.elements(OLSKAppToolbarLauncherButton, 0);
 	});
 
 	context('OLSKAppToolbarGuideLink', function () {
