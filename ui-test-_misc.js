@@ -7,8 +7,8 @@ describe('OLSKAppToolbar_Misc', function () {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKAppToolbarGuideURL: 'alfa',
 			OLSKAppToolbarDonateURL: 'bravo',
-			OLSKAppToolbarStorageStatus: 'alfa',
 			OLSKAppToolbarLauncherVisible: true,
+			OLSKAppToolbarStorageStatus: 'alfa',
 		});
 	});
 
@@ -32,6 +32,14 @@ describe('OLSKAppToolbar_Misc', function () {
 
 		it('sets target', function () {
 			browser.assert.attribute(OLSKAppToolbarDonateLink, 'target', '_blank');
+		});
+
+	});
+
+	describe('OLSKAppToolbarStorageStatus', function test_OLSKAppToolbarStorageStatus () {
+
+		it('binds OLSKAppToolbarStorageStatus', function () {
+			browser.assert.text(OLSKAppToolbarStorageStatus, 'alfa');
 		});
 
 	});
@@ -72,14 +80,6 @@ describe('OLSKAppToolbar_Misc', function () {
 
 		it('sets src', function () {
 			browser.assert.elements(`${ OLSKAppToolbarStorageButtonImage } #_OLSKSharedCloud`, 1);
-		});
-
-	});
-
-	describe('OLSKAppToolbarStorageStatus', function test_OLSKAppToolbarStorageStatus () {
-
-		it('binds OLSKAppToolbarStorageStatus', function () {
-			browser.assert.text(OLSKAppToolbarStorageStatus, 'alfa');
 		});
 
 	});

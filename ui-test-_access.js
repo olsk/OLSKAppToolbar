@@ -7,9 +7,9 @@ Object.entries({
 	
 	OLSKAppToolbarDonateLink: '.OLSKAppToolbarDonateLink',
 	
+	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
 	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
 	OLSKAppToolbarStorageButtonImage: '.OLSKAppToolbarStorageButtonImage',
-	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
 
 	OLSKAppToolbarLauncherButton: '.OLSKAppToolbarLauncherButton',
 	OLSKAppToolbarLauncherButtonImage: '.OLSKAppToolbarLauncherButtonImage',
@@ -43,16 +43,16 @@ describe('OLSKAppToolbar_Access', function () {
 		browser.assert.elements(OLSKAppToolbarDonateLink, 0);
 	});
 
+	it('shows OLSKAppToolbarStorageStatus', function () {
+		browser.assert.elements(OLSKAppToolbarStorageStatus, 1);
+	});
+
 	it('shows OLSKAppToolbarStorageButton', function () {
 		browser.assert.elements(OLSKAppToolbarStorageButton, 1);
 	});
 
 	it('shows OLSKAppToolbarStorageButtonImage', function () {
 		browser.assert.elements(OLSKAppToolbarStorageButtonImage, 1);
-	});
-
-	it('shows OLSKAppToolbarStorageStatus', function () {
-		browser.assert.elements(OLSKAppToolbarStorageStatus, 1);
 	});
 
 	it('hides OLSKAppToolbarLauncherButton', function () {
