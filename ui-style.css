@@ -14,16 +14,12 @@
 	color: inherit;
 }
 
-.OLSKAppToolbar :global(.OLSKToolbar) {
-	flex-grow: 1;
-}
-
-.OLSKAppToolbar :global(.OLSKToolbar > div) {
+.OLSKAppToolbar div {
 	display: flex;
 	align-items: center;
 }
 
-.OLSKAppToolbar :global(.OLSKToolbarElementGroup > *:not(:first-child)) {
+.OLSKAppToolbar .OLSKToolbarElementGroup > *:not(:first-child) {
 	margin-left: 10px;
 }
 
