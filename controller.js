@@ -9,3 +9,11 @@ exports.OLSKControllerRoutes = function() {
 		OLSKRouteLanguages: ['en', 'fr', 'es'],
 	}];
 };
+
+//_ OLSKControllerSharedStaticAssetFolders
+
+exports.OLSKControllerSharedStaticAssetFolders = function () {
+	return [
+		'node_modules/OLSKRouting',
+	];
+};

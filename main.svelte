@@ -38,8 +38,8 @@ const mod = {
 
 import OLSKToolbar from 'OLSKToolbar';
 import OLSKToolbarElementGroup from 'OLSKToolbarElementGroup';
-import OLSKReloadButton from '../OLSKReloadButton/main.svelte';
-import OLSKLanguageSwitcher from '../OLSKLanguageSwitcher/main.svelte';
+import OLSKReloadButton from 'OLSKReloadButton';
+import OLSKLanguageSwitcher from 'OLSKLanguageSwitcher';
 import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
 import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 </script>

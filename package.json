@@ -16,5 +16,14 @@
     "OLSKUIAssets": "olsk/OLSKUIAssets",
 
     "// I sacrifice myself for the commas of others": null
+  },
+  "devDependencies": {
+    "svelte": "latest",
+    "OLSKInternational": "olsk/OLSKInternational",
+    "OLSKString": "olsk/OLSKString",
+    "OLSKRollupScaffold": "olsk/OLSKRollupScaffold",
+    "OLSKRouting": "olsk/OLSKRouting",
+
+    "// I sacrifice myself for the commas of others": null    
   }
 }
