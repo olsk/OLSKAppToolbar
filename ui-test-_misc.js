@@ -12,6 +12,18 @@ describe('OLSKAppToolbar_Misc', function () {
 		});
 	});
 
+	describe('OLSKAppToolbar', function test_OLSKAppToolbar () {
+
+		it('classes OLSKToolbar', function () {
+			browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbar');
+		});
+
+		it('classes OLSKToolbarJustify', function () {
+			browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbarJustify');
+		});
+
+	});
+
 	describe('OLSKAppToolbarGuideLink', function test_OLSKAppToolbarGuideLink () {
 
 		it('sets href', function () {

@@ -36,53 +36,49 @@ const mod = {
 
 };
 
-import OLSKToolbar from 'OLSKToolbar';
-import OLSKToolbarElementGroup from 'OLSKToolbarElementGroup';
 import OLSKReloadButton from 'OLSKReloadButton';
 import OLSKLanguageSwitcher from 'OLSKLanguageSwitcher';
 import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
 import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 </script>
 
-<footer class="OLSKAppToolbar">
+<div class="OLSKAppToolbar OLSKToolbar OLSKToolbarJustify">
 
-	<OLSKToolbar OLSKToolbarJustify={ true }>
-		<OLSKToolbarElementGroup>
-			<OLSKReloadButton />
-			
-			<OLSKLanguageSwitcher OLSKSharedActiveRouteConstant={ window.OLSKPublicConstants('OLSKSharedActiveRouteConstant') }
-				OLSKSharedPageLanguagesAvailable={ window.OLSKPublicConstants('OLSKSharedPageLanguagesAvailable') }
-				OLSKSharedPageCurrentLanguage={ window.OLSKPublicConstants('OLSKSharedPageCurrentLanguage') }
-				/>
-
-			{#if OLSKAppToolbarGuideURL}
-				<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
-			{/if}
-
-			{#if OLSKAppToolbarDonateURL}
-				<a class="OLSKAppToolbarDonateLink" href={ OLSKAppToolbarDonateURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarDonateLinkText') }</a>
-			{/if}
-
-			<!-- <button on:click={ mod.InterfaceExportButtonDidClick }>Export</button>
-
-			<input type="file" accept=".json" on:change={ mod.InterfaceImportButtonDidClick } /> -->
-		</OLSKToolbarElementGroup>
-
-		<OLSKToolbarElementGroup>
-			<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
-
-			<button class="OLSKAppToolbarStorageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage } class:OSWIconVisible={ false }>
-				<div class="OLSKAppToolbarStorageButtonImage">{@html _OLSKSharedCloud }</div>
-			</button>
-
-			{#if OLSKAppToolbarLauncherVisible}
-				<button class="OLSKAppToolbarLauncherButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher } class:OSWIconVisible={ false }>
-					<div class="OLSKAppToolbarLauncherButtonImage">{@html _OLSKSharedLauncher }</div>
-				</button>
-			{/if}
-		</OLSKToolbarElementGroup>
-	</OLSKToolbar>
+<div class="OLSKToolbarElementGroup">
+	<OLSKReloadButton />
 	
-</footer>
+	<OLSKLanguageSwitcher OLSKSharedActiveRouteConstant={ window.OLSKPublicConstants('OLSKSharedActiveRouteConstant') }
+		OLSKSharedPageLanguagesAvailable={ window.OLSKPublicConstants('OLSKSharedPageLanguagesAvailable') }
+		OLSKSharedPageCurrentLanguage={ window.OLSKPublicConstants('OLSKSharedPageCurrentLanguage') }
+		/>
+
+	{#if OLSKAppToolbarGuideURL}
+		<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
+	{/if}
+
+	{#if OLSKAppToolbarDonateURL}
+		<a class="OLSKAppToolbarDonateLink" href={ OLSKAppToolbarDonateURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarDonateLinkText') }</a>
+	{/if}
+
+	<!-- <button on:click={ mod.InterfaceExportButtonDidClick }>Export</button>
+
+	<input type="file" accept=".json" on:change={ mod.InterfaceImportButtonDidClick } /> -->
+</div>
+
+<div class="OLSKToolbarElementGroup">
+	<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
+
+	<button class="OLSKAppToolbarStorageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage } class:OSWIconVisible={ false }>
+		<div class="OLSKAppToolbarStorageButtonImage">{@html _OLSKSharedCloud }</div>
+	</button>
+
+	{#if OLSKAppToolbarLauncherVisible}
+		<button class="OLSKAppToolbarLauncherButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher } class:OSWIconVisible={ false }>
+			<div class="OLSKAppToolbarLauncherButtonImage">{@html _OLSKSharedLauncher }</div>
+		</button>
+	{/if}
+</div>
+	
+</div>
 
 <style src="./ui-style.css"></style>
