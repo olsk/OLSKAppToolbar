@@ -19,7 +19,7 @@
 	align-items: center;
 }
 
-.OLSKAppToolbar .OLSKToolbarElementGroup > *:not(:first-child) {
+.OLSKAppToolbar :global(.OLSKToolbarElementGroup > *:not(:first-child)) {
 	margin-left: 10px;
 }
 
