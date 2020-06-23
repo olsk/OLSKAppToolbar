@@ -20,7 +20,9 @@ Object.entries({
 describe('OLSKAppToolbar_Access', function () {
 
 	before(function() {
-		return browser.OLSKVisit(kDefaultRoute);
+		return browser.OLSKVisit(kDefaultRoute, {
+			OLSKAppToolbarDispatchLauncher: null,
+		});
 	});
 
 	it('shows OLSKAppToolbar', function () {
@@ -87,12 +89,10 @@ describe('OLSKAppToolbar_Access', function () {
 	
 	});
 
-	context('OLSKAppToolbarLauncherVisible', function () {
+	context('OLSKAppToolbarDispatchLauncher', function () {
 
 		before(function() {
-			return browser.OLSKVisit(kDefaultRoute, {
-				OLSKAppToolbarLauncherVisible: true,
-			});
+			return browser.OLSKVisit(kDefaultRoute);
 		});
 
 		it('shows OLSKAppToolbarLauncherButton', function () {

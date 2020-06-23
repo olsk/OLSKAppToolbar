@@ -13,7 +13,6 @@ kDefaultRoute.OLSKRouteLanguages.forEach(function (languageCode) {
 				OLSKRoutingLanguage: languageCode,
 				OLSKAppToolbarGuideURL: 'alfa',
 				OLSKAppToolbarDonateURL: 'bravo',
-				OLSKAppToolbarLauncherVisible: true,
 			});
 		});
 

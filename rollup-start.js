@@ -11,7 +11,13 @@ const OLSKAppToolbar = new RollupStart({
 		}),
 		_OLSKAppToolbarDispatchExport: (function __OLSKAppToolbarDispatchExport () {}),
 		_OLSKAppToolbarDispatchImport: (function __OLSKAppToolbarDispatchImport () {}),
-	}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()))),
+	}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).map(function (e, index, coll) {
+		if (['OLSKAppToolbarDispatchLauncher'].includes(e[0])) {
+			e[1] = JSON.parse(e[1]);
+		}
+
+		return e;
+	}))),
 });
 
 export default OLSKAppToolbar;

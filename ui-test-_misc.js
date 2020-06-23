@@ -7,7 +7,6 @@ describe('OLSKAppToolbar_Misc', function () {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKAppToolbarGuideURL: 'alfa',
 			OLSKAppToolbarDonateURL: 'bravo',
-			OLSKAppToolbarLauncherVisible: true,
 			OLSKAppToolbarStorageStatus: 'alfa',
 		});
 	});
