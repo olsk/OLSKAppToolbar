@@ -18,7 +18,7 @@ const mod = {
 
 	InterfaceWindowDidKeydown (event) {
 		const handlerFunctions = {
-			Enter () {
+			Space () {
 				if (!event.altKey) {
 					return
 				}

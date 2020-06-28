@@ -10,14 +10,14 @@ describe('OLSKAppToolbar_Shortcuts', function () {
 	// 	});
 	// });
 
-	describe('Enter', function test_Enter () {
+	describe('Space', function test_Space () {
 
 		before(function () {
 			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
 		});
 
 		before(function () {
-			return browser.OLSKFireKeyboardEvent(browser.window, 'Enter');
+			return browser.OLSKFireKeyboardEvent(browser.window, 'Space');
 		});
 		
 		it('sends OLSKAppToolbarDispatchLauncher', function () {
@@ -26,14 +26,14 @@ describe('OLSKAppToolbar_Shortcuts', function () {
 
 	});
 
-	describe('AltEnter', function test_AltEnter () {
+	describe('AltSpace', function test_AltSpace () {
 
 		before(function () {
 			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
 		});
 
 		before(function () {
-			return browser.OLSKFireKeyboardEvent(browser.window, 'Enter', {
+			return browser.OLSKFireKeyboardEvent(browser.window, 'Space', {
 				altKey: true,
 			});
 		});
