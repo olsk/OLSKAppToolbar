@@ -2,14 +2,6 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 describe('OLSKAppToolbar_Shortcuts', function () {
 
-	// before(function() {
-	// 	return browser.OLSKVisit(kDefaultRoute, {
-	// 		OLSKAppToolbarGuideURL: 'alfa',
-	// 		OLSKAppToolbarDonateURL: 'bravo',
-	// 		OLSKAppToolbarStorageStatus: 'alfa',
-	// 	});
-	// });
-
 	describe('Space', function test_Space () {
 
 		before(function () {
