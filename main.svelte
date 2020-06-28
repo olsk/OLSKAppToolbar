@@ -16,6 +16,22 @@ const mod = {
 
 	// INTERFACE
 
+	InterfaceWindowDidKeydown (event) {
+		const handlerFunctions = {
+			Enter () {
+				if (!event.altKey) {
+					return
+				}
+
+				OLSKAppToolbarDispatchLauncher()
+
+				return event.preventDefault();
+			},
+		};
+
+		handlerFunctions[event.code] && handlerFunctions[event.code]();
+	},
+
 	InterfaceExportButtonDidClick () {
 		_OLSKAppToolbarDispatchExport();
 	},
@@ -40,6 +56,7 @@ import OLSKLanguageSwitcher from 'OLSKLanguageSwitcher';
 import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
 import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 </script>
+<svelte:window on:keydown={ mod.InterfaceWindowDidKeydown } />
 
 <div class="OLSKAppToolbar OLSKToolbar OLSKToolbarJustify">
 
