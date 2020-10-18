@@ -10,7 +10,6 @@ const OLSKAppToolbar = new RollupStart({
 			window.TestOLSKAppToolbarDispatchStorage.innerHTML = parseInt(window.TestOLSKAppToolbarDispatchStorage.innerHTML) + 1;
 		}),
 		_OLSKAppToolbarDispatchExport: (function  () {}),
-		_OLSKAppToolbarDispatchImport: (function  () {}),
 	}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).map(function (e, index, coll) {
 		if (['OLSKAppToolbarDispatchLauncher'].includes(e[0])) {
 			e[1] = JSON.parse(e[1]);

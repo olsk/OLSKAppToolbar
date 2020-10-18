@@ -5,7 +5,6 @@ export let OLSKAppToolbarStorageStatus = '';
 export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
 export let _OLSKAppToolbarDispatchExport;
-export let _OLSKAppToolbarDispatchImport;
 
 import OLSKInternational from 'OLSKInternational';
 const OLSKLocalized = function(translationConstant) {
@@ -36,19 +35,6 @@ const mod = {
 		_OLSKAppToolbarDispatchExport();
 	},
 
-	InterfaceImportButtonDidClick (event) {
-		const inputElement = event.target;
-		const fileReader = new FileReader();
-		
-		fileReader.onload = function (event) {
-			_OLSKAppToolbarDispatchImport(event.target.result);
-			
-			inputElement.value = null;
-		};
-
-		fileReader.readAsText(event.target.files.item(0));
-	},
-
 };
 
 import OLSKReloadButton from 'OLSKReloadButton';
@@ -76,9 +62,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 		<a class="OLSKAppToolbarDonateLink" href={ OLSKAppToolbarDonateURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarDonateLinkText') }</a>
 	{/if}
 
-	<!-- <button on:click={ mod.InterfaceExportButtonDidClick }>Export</button>
-
-	<input type="file" accept=".json" on:change={ mod.InterfaceImportButtonDidClick } /> -->
+	<!-- <button on:click={ mod.InterfaceExportButtonDidClick }>Export</button> -->
 </div>
 
 <div class="OLSKToolbarElementGroup">
