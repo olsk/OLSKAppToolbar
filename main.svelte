@@ -4,7 +4,6 @@ export let OLSKAppToolbarDonateURL = '';
 export let OLSKAppToolbarStorageStatus = '';
 export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
-export let _OLSKAppToolbarDispatchExport;
 
 import OLSKInternational from 'OLSKInternational';
 const OLSKLocalized = function(translationConstant) {
@@ -29,10 +28,6 @@ const mod = {
 		};
 
 		handlerFunctions[event.code] && handlerFunctions[event.code]();
-	},
-
-	InterfaceExportButtonDidClick () {
-		_OLSKAppToolbarDispatchExport();
 	},
 
 };
@@ -61,8 +56,6 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 	{#if OLSKAppToolbarDonateURL}
 		<a class="OLSKAppToolbarDonateLink" href={ OLSKAppToolbarDonateURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarDonateLinkText') }</a>
 	{/if}
-
-	<!-- <button on:click={ mod.InterfaceExportButtonDidClick }>Export</button> -->
 </div>
 
 <div class="OLSKToolbarElementGroup">
