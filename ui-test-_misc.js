@@ -5,7 +5,6 @@ describe('OLSKAppToolbar_Misc', function () {
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKAppToolbarGuideURL: 'alfa',
-			OLSKAppToolbarDonateURL: 'bravo',
 			OLSKAppToolbarStorageStatus: 'alfa',
 		});
 	});
@@ -34,14 +33,22 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarDonateLink', function test_OLSKAppToolbarDonateLink () {
+	describe('OLSKAppToolbarFundButton', function test_OLSKAppToolbarFundButton () {
 
-		it('sets href', function () {
-			browser.assert.attribute(OLSKAppToolbarDonateLink, 'href', 'bravo');
-		});
+		context('click', function () {
 
-		it('sets target', function () {
-			browser.assert.attribute(OLSKAppToolbarDonateLink, 'target', '_blank');
+			before(function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchFund', '0');
+			});
+
+			before(function () {
+				browser.click(OLSKAppToolbarFundButton);
+			});
+		
+			it('sends OLSKAppToolbarDispatchFund', function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchFund', '1');
+			});
+		
 		});
 
 	});

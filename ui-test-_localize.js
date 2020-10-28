@@ -12,7 +12,6 @@ kDefaultRoute.OLSKRouteLanguages.forEach(function (languageCode) {
 			return browser.OLSKVisit(kDefaultRoute, {
 				OLSKRoutingLanguage: languageCode,
 				OLSKAppToolbarGuideURL: 'alfa',
-				OLSKAppToolbarDonateURL: 'bravo',
 			});
 		});
 
@@ -20,8 +19,8 @@ kDefaultRoute.OLSKRouteLanguages.forEach(function (languageCode) {
 			browser.assert.text(OLSKAppToolbarGuideLink, uLocalized('OLSKAppToolbarGuideLinkText'));
 		});
 	
-		it('localizes OLSKAppToolbarDonateLink', function() {
-			browser.assert.text(OLSKAppToolbarDonateLink, uLocalized('OLSKAppToolbarDonateLinkText'));
+		it('localizes OLSKAppToolbarFundButton', function() {
+			browser.assert.text(OLSKAppToolbarFundButton, uLocalized('OLSKAppToolbarFundButtonText'));
 		});
 	
 		it('localizes OLSKAppToolbarStorageButton', function() {

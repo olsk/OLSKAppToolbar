@@ -1,9 +1,9 @@
 <script>
 export let OLSKAppToolbarGuideURL = '';
-export let OLSKAppToolbarDonateURL = '';
 export let OLSKAppToolbarStorageStatus = '';
 export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
+export let OLSKAppToolbarDispatchFund = null;
 
 import OLSKInternational from 'OLSKInternational';
 const OLSKLocalized = function(translationConstant) {
@@ -53,8 +53,8 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 		<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
 	{/if}
 
-	{#if OLSKAppToolbarDonateURL}
-		<a class="OLSKAppToolbarDonateLink" href={ OLSKAppToolbarDonateURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarDonateLinkText') }</a>
+	{#if OLSKAppToolbarDispatchFund }
+		<button class="OLSKAppToolbarFundButton" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
 	{/if}
 </div>
 

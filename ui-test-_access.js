@@ -5,7 +5,7 @@ Object.entries({
 	
 	OLSKAppToolbarGuideLink: '.OLSKAppToolbarGuideLink',
 	
-	OLSKAppToolbarDonateLink: '.OLSKAppToolbarDonateLink',
+	OLSKAppToolbarFundButton: '.OLSKAppToolbarFundButton',
 	
 	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
 	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
@@ -21,6 +21,7 @@ describe('OLSKAppToolbar_Access', function () {
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
+			OLSKAppToolbarDispatchFund: null,
 			OLSKAppToolbarDispatchLauncher: null,
 		});
 	});
@@ -41,8 +42,8 @@ describe('OLSKAppToolbar_Access', function () {
 		browser.assert.elements(OLSKAppToolbarGuideLink, 0);
 	});
 
-	it('hides OLSKAppToolbarDonateLink', function () {
-		browser.assert.elements(OLSKAppToolbarDonateLink, 0);
+	it('hides OLSKAppToolbarFundButton', function () {
+		browser.assert.elements(OLSKAppToolbarFundButton, 0);
 	});
 
 	it('shows OLSKAppToolbarStorageStatus', function () {
@@ -75,16 +76,14 @@ describe('OLSKAppToolbar_Access', function () {
 	
 	});
 
-	context('OLSKAppToolbarDonateLink', function () {
+	context('OLSKAppToolbarFundButton', function () {
 
 		before(function() {
-			return browser.OLSKVisit(kDefaultRoute, {
-				OLSKAppToolbarDonateURL: 'alfa',
-			});
+			return browser.OLSKVisit(kDefaultRoute);
 		});
 
-		it('shows OLSKAppToolbarDonateLink', function () {
-			browser.assert.elements(OLSKAppToolbarDonateLink, 1);
+		it('shows OLSKAppToolbarFundButton', function () {
+			browser.assert.elements(OLSKAppToolbarFundButton, 1);
 		});
 	
 	});
