@@ -17,6 +17,9 @@
     "OLSKRollupScaffold": "olsk/OLSKRollupScaffold",
     "OLSKRouting": "olsk/OLSKRouting",
 
-    "// I sacrifice myself for the commas of others": null    
+    "// SPEC": null,
+    "OLSKSpec": "olsk/OLSKSpec",
+    
+     "// I sacrifice myself for the commas of others": null    
   }
 }
