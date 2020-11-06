@@ -35,6 +35,10 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	describe('OLSKAppToolbarFundButton', function test_OLSKAppToolbarFundButton () {
 
+		it('classes OLSKCommonButton', function () {
+			browser.assert.hasClass(OLSKAppToolbarFundButton, 'OLSKCommonButton');
+		});
+
 		context('click', function () {
 
 			before(function () {

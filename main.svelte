@@ -54,7 +54,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 	{/if}
 
 	{#if OLSKAppToolbarDispatchFund }
-		<button class="OLSKAppToolbarFundButton" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
+		<button class="OLSKAppToolbarFundButton OLSKCommonButton" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
 	{/if}
 </div>
 
