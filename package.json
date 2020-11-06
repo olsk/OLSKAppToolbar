@@ -1,6 +1,11 @@
 {
   "name": "OLSKAppToolbar",
   "main": "main.svelte",
+  "scripts": {
+    "start": "olsk-express .",
+
+    "test": "olsk-spec"
+  },
   "dependencies": {
     "// RELOAD BUTTON": null,
     "OLSKReloadButton": "olsk/OLSKReloadButton",
