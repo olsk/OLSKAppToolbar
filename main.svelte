@@ -1,6 +1,7 @@
 <script>
 export let OLSKAppToolbarGuideURL = '';
 export let OLSKAppToolbarStorageStatus = '';
+export let OLSKAppToolbarFundShowProgress = false;
 export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
 export let OLSKAppToolbarDispatchFund = null;
@@ -53,8 +54,12 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 		<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
 	{/if}
 
-	{#if OLSKAppToolbarDispatchFund }
+	{#if OLSKAppToolbarDispatchFund && !OLSKAppToolbarFundShowProgress }
 		<button class="OLSKAppToolbarFundButton OLSKCommonButton" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
+	{/if}
+
+	{#if OLSKAppToolbarFundShowProgress }
+		<div class="OLSKAppToolbarFundProgress">…</div>
 	{/if}
 </div>
 

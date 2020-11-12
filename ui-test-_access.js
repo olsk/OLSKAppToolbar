@@ -6,6 +6,7 @@ Object.entries({
 	OLSKAppToolbarGuideLink: '.OLSKAppToolbarGuideLink',
 	
 	OLSKAppToolbarFundButton: '.OLSKAppToolbarFundButton',
+	OLSKAppToolbarFundProgress: '.OLSKAppToolbarFundProgress',
 	
 	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
 	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
@@ -46,6 +47,10 @@ describe('OLSKAppToolbar_Access', function () {
 		browser.assert.elements(OLSKAppToolbarFundButton, 0);
 	});
 
+	it('hides OLSKAppToolbarFundProgress', function () {
+		browser.assert.elements(OLSKAppToolbarFundProgress, 0);
+	});
+
 	it('shows OLSKAppToolbarStorageStatus', function () {
 		browser.assert.elements(OLSKAppToolbarStorageStatus, 1);
 	});
@@ -84,6 +89,28 @@ describe('OLSKAppToolbar_Access', function () {
 
 		it('shows OLSKAppToolbarFundButton', function () {
 			browser.assert.elements(OLSKAppToolbarFundButton, 1);
+		});
+
+		it('hides OLSKAppToolbarFundProgress', function () {
+			browser.assert.elements(OLSKAppToolbarFundProgress, 0);
+		});
+	
+	});
+
+	context('OLSKAppToolbarFundButton', function () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				OLSKAppToolbarFundShowProgress: true,
+			});
+		});
+
+		it('hides OLSKAppToolbarFundButton', function () {
+			browser.assert.elements(OLSKAppToolbarFundButton, 0);
+		});
+
+		it('shows OLSKAppToolbarFundProgress', function () {
+			browser.assert.elements(OLSKAppToolbarFundProgress, 1);
 		});
 	
 	});

@@ -5,7 +5,6 @@ describe('OLSKAppToolbar_Misc', function () {
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKAppToolbarGuideURL: 'alfa',
-			OLSKAppToolbarStorageStatus: 'alfa',
 		});
 	});
 
@@ -57,7 +56,27 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
+	describe('OLSKAppToolbarFundProgress', function test_OLSKAppToolbarFundProgress () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				OLSKAppToolbarFundShowProgress: true,
+			});
+		});
+
+		it('sets innerText', function () {
+			browser.assert.text(OLSKAppToolbarFundProgress, '…');
+		});
+
+	});
+
 	describe('OLSKAppToolbarStorageStatus', function test_OLSKAppToolbarStorageStatus () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				OLSKAppToolbarStorageStatus: 'alfa',
+			});
+		});
 
 		it('binds OLSKAppToolbarStorageStatus', function () {
 			browser.assert.text(OLSKAppToolbarStorageStatus, 'alfa');
