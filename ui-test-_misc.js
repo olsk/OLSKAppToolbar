@@ -2,10 +2,13 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 describe('OLSKAppToolbar_Misc', function () {
 
+	const item = {
+		OLSKAppToolbarGuideURL: 'alfa',
+		OLSKAppToolbarFundLimitText: Math.random().toString(),
+	};
+
 	before(function() {
-		return browser.OLSKVisit(kDefaultRoute, {
-			OLSKAppToolbarGuideURL: 'alfa',
-		});
+		return browser.OLSKVisit(kDefaultRoute, item);
 	});
 
 	describe('OLSKAppToolbar', function test_OLSKAppToolbar () {
@@ -52,6 +55,14 @@ describe('OLSKAppToolbar_Misc', function () {
 				browser.assert.text('#TestOLSKAppToolbarDispatchFund', '1');
 			});
 		
+		});
+
+	});
+
+	describe('OLSKAppToolbarFundLimit', function test_OLSKAppToolbarFundLimit () {
+
+		it('binds OLSKAppToolbarFundLimitText', function () {
+			browser.assert.text(OLSKAppToolbarFundLimit, item.OLSKAppToolbarFundLimitText);
 		});
 
 	});

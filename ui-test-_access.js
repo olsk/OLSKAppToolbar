@@ -7,6 +7,7 @@ Object.entries({
 	
 	OLSKAppToolbarFundButton: '.OLSKAppToolbarFundButton',
 	OLSKAppToolbarFundProgress: '.OLSKAppToolbarFundProgress',
+	OLSKAppToolbarFundLimit: '.OLSKAppToolbarFundLimit',
 	
 	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
 	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
@@ -51,6 +52,10 @@ describe('OLSKAppToolbar_Access', function () {
 		browser.assert.elements(OLSKAppToolbarFundProgress, 0);
 	});
 
+	it('hides OLSKAppToolbarFundLimit', function () {
+		browser.assert.elements(OLSKAppToolbarFundLimit, 0);
+	});
+
 	it('shows OLSKAppToolbarStorageStatus', function () {
 		browser.assert.elements(OLSKAppToolbarStorageStatus, 1);
 	});
@@ -91,8 +96,26 @@ describe('OLSKAppToolbar_Access', function () {
 			browser.assert.elements(OLSKAppToolbarFundButton, 1);
 		});
 
+		it('hides OLSKAppToolbarFundLimit', function () {
+			browser.assert.elements(OLSKAppToolbarFundLimit, 0);
+		});
+
 		it('hides OLSKAppToolbarFundProgress', function () {
 			browser.assert.elements(OLSKAppToolbarFundProgress, 0);
+		});
+	
+	});
+
+	context('OLSKAppToolbarFundLimitText', function () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				OLSKAppToolbarFundLimitText: Math.random().toString(),
+			});
+		});
+
+		it('shows OLSKAppToolbarFundLimit', function () {
+			browser.assert.elements(OLSKAppToolbarFundLimit, 1);
 		});
 	
 	});
@@ -101,12 +124,17 @@ describe('OLSKAppToolbar_Access', function () {
 
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
+				OLSKAppToolbarFundLimitText: Math.random().toString(),
 				OLSKAppToolbarFundShowProgress: true,
 			});
 		});
 
 		it('hides OLSKAppToolbarFundButton', function () {
 			browser.assert.elements(OLSKAppToolbarFundButton, 0);
+		});
+
+		it('hides OLSKAppToolbarFundLimit', function () {
+			browser.assert.elements(OLSKAppToolbarFundLimit, 0);
 		});
 
 		it('shows OLSKAppToolbarFundProgress', function () {
