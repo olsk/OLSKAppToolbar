@@ -55,18 +55,20 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 		<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
 	{/if}
 
-	{#if OLSKAppToolbarDispatchFund && !OLSKAppToolbarFundShowProgress }
-		<button class="OLSKAppToolbarFundButton OLSKCommonButton" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
+	<div class="OLSKAppToolbarFund">
+		{#if OLSKAppToolbarDispatchFund && !OLSKAppToolbarFundShowProgress }
+			<button class="OLSKAppToolbarFundButton OLSKCommonButton" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
 
-		{#if typeof OLSKAppToolbarFundLimitText !== 'undefined' && OLSKAppToolbarFundLimitText !== '' }
-			<!-- #hotfix svelte rendering issue resolves with button  -->
-			<button class="OLSKAppToolbarFundLimit OLSKLayoutButtonNoStyle" disabled>{ OLSKAppToolbarFundLimitText.toString() }</button>
+			{#if typeof OLSKAppToolbarFundLimitText !== 'undefined' && OLSKAppToolbarFundLimitText !== '' }
+				<!-- #hotfix svelte rendering issue resolves with button  -->
+				<button class="OLSKAppToolbarFundLimit OLSKLayoutButtonNoStyle" disabled>{ OLSKAppToolbarFundLimitText.toString() }</button>
+			{/if}
 		{/if}
-	{/if}
 
-	{#if OLSKAppToolbarFundShowProgress }
-		<div class="OLSKAppToolbarFundProgress">…</div>
-	{/if}
+		{#if OLSKAppToolbarFundShowProgress }
+			<div class="OLSKAppToolbarFundProgress">…</div>
+		{/if}
+	</div>
 </div>
 
 <div class="OLSKToolbarElementGroup">
