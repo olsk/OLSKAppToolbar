@@ -59,7 +59,8 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 		<button class="OLSKAppToolbarFundButton OLSKCommonButton" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
 
 		{#if OLSKAppToolbarFundLimitText }
-			<span class="OLSKAppToolbarFundLimit">{ OLSKAppToolbarFundLimitText }</span>
+			<!-- #hotfix svelte rendering issue resolves with button  -->
+			<button class="OLSKAppToolbarFundLimit OLSKLayoutButtonNoStyle" disabled>{ OLSKAppToolbarFundLimitText.toString() }</button>
 		{/if}
 	{/if}
 
