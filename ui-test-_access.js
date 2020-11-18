@@ -117,6 +117,20 @@ describe('OLSKAppToolbar_Access', function () {
 		it('shows OLSKAppToolbarFundLimit', function () {
 			browser.assert.elements(OLSKAppToolbarFundLimit, 1);
 		});
+
+		context('falsy', function () {
+			
+			before(function() {
+				return browser.OLSKVisit(kDefaultRoute, {
+					OLSKAppToolbarFundLimitText: 0,
+				});
+			});
+
+			it('shows OLSKAppToolbarFundLimit', function () {
+				browser.assert.elements(OLSKAppToolbarFundLimit, 1);
+			});
+		
+		});
 	
 	});
 
