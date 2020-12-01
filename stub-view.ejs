@@ -16,7 +16,7 @@
 	<script src="/node_modules/OLSKRouting/main.js"></script>
 	<script type="text/javascript">
 		window.OLSKCanonicalFor = function(inputData, params) {
-			return OLSKRouting.OLSKRoutingCanonicalPathWithRoutePathAndOptionalParams((<%- JSON.stringify([OLSKSharedActiveRouteConstant].reduce(function (map, e) {
+			return OLSKRouting.OLSKRoutingCanonicalPath((<%- JSON.stringify([OLSKSharedActiveRouteConstant].reduce(function (map, e) {
 				map[e] = OLSKRouteObjectFor(e).OLSKRoutePath;
 				return map;
 			}, {})) %>)[inputData], params);
