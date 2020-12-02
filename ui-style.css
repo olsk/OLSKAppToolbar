@@ -4,10 +4,8 @@
 	/* AppContainerFlexbox:Child */
 	flex-shrink: 0;
 
-	/* OLSKAppToolbarFlexbox:Parent */
-	display: flex;
+	/* OLSKToolbarFlexbox:Parent */
 	justify-content: space-between;
-	align-items: center;
 }
 
 .OLSKAppToolbar a {
