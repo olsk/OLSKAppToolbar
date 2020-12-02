@@ -1,29 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="/<%= OLSKSharedPageControllerSlug %>/__compiled/ui-style.css">
-
-	<script type="text/javascript">
-		window.OLSKPublicConstants = function (inputData) {
-			return <%- JSON.stringify({
-				OLSKSharedActiveRouteConstant,
-				OLSKSharedPageCurrentLanguage,
-				OLSKSharedPageLanguagesAvailable,
-			}) %>[inputData];
-		};
-	</script>
-
-	<script src="/node_modules/OLSKRouting/main.js"></script>
-	<script type="text/javascript">
-		window.OLSKCanonicalFor = function(inputData, params) {
-			return OLSKRouting.OLSKRoutingCanonicalPath((<%- JSON.stringify([OLSKSharedActiveRouteConstant].reduce(function (map, e) {
-				map[e] = OLSKRouteObjectFor(e).OLSKRoutePath;
-				return map;
-			}, {})) %>)[inputData], params);
-		};
-	</script>
-</head>
-<body>
+<%
+locals.OLSKPageAssets = [
+	'__compiled/ui-style.css',
+];
+locals._OLSKPageAssetFolder = [
+	'node_modules',
+];
+locals.OLSKPagePublicConstants = {
+	OLSKSharedActiveRouteConstant,
+	OLSKSharedPageCurrentLanguage,
+	OLSKSharedPageLanguagesAvailable,
+};
+locals.OLSKPagePublicRouteKeys = [OLSKSharedActiveRouteConstant];
+%>
 
 <script src="/<%= OLSKSharedPageControllerSlug %>/__compiled/ui-behaviour.js"></script>
 
@@ -41,6 +29,3 @@
 	<strong>OLSKAppToolbarDispatchStorage</strong>
 	<span id="TestOLSKAppToolbarDispatchStorage">0</span>
 </p>
-
-</body>
-</html>
