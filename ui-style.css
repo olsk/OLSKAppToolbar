@@ -1,6 +1,4 @@
 .OLSKAppToolbar {
-	border-top: var(--OLSKAppBorderStyle);
-	
 	/* AppContainerFlexbox:Child */
 	flex-shrink: 0;
 
