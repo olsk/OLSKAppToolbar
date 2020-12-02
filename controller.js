@@ -1,6 +1,6 @@
 exports.OLSKControllerRoutes = function() {
 	return [{
-		OLSKRoutePath: '/stub/OLSKAppToolbar',
+		OLSKRoutePath: '/',
 		OLSKRouteMethod: 'get',
 		OLSKRouteSignature: 'OLSKAppToolbarStubRoute',
 		OLSKRouteFunction (req, res, next) {
@@ -9,8 +9,6 @@ exports.OLSKControllerRoutes = function() {
 		OLSKRouteLanguageCodes: ['en', 'fr', 'es'],
 	}];
 };
-
-//_ OLSKControllerSharedStaticAssetFolders
 
 exports.OLSKControllerSharedStaticAssetFolders = function () {
 	return [
