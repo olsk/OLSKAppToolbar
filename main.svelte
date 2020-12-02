@@ -53,7 +53,9 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 	{#if OLSKAppToolbarGuideURL}
 		<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
 	{/if}
+</div>
 
+<div class="OLSKToolbarElementGroup">
 	<div class="OLSKAppToolbarFund">
 		{#if OLSKAppToolbarDispatchFund && !OLSKAppToolbarFundShowProgress }
 			<button class="OLSKAppToolbarFundButton OLSKCommonButton" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
