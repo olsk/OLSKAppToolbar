@@ -3,25 +3,17 @@
   "main": "main.svelte",
   "scripts": {
     "start": "olsk-express .",
-
     "test": "olsk-spec"
   },
   "dependencies": {
-    "// RELOAD BUTTON": null,
     "OLSKReloadButton": "olsk/OLSKReloadButton",
-    
-    "// ASSETS": null,
     "OLSKUIAssets": "olsk/OLSKUIAssets",
-
     "// I sacrifice myself for the commas of others": null
   },
   "devDependencies": {
     "OLSKRollupScaffold": "olsk/OLSKRollupScaffold",
-    "OLSKRouting": "olsk/OLSKRouting",
-
-    "// SPEC": null,
     "OLSKSpec": "olsk/OLSKSpec",
-    
-     "// I sacrifice myself for the commas of others": null    
+    "OLSKRouting": "olsk/OLSKRouting",
+    "// I sacrifice myself for the commas of others": null
   }
 }
