@@ -21,6 +21,10 @@ describe('OLSKAppToolbar_Misc', function () {
 			browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbarJustify');
 		});
 
+		it('classes OLSKToolbarBorderTop', function () {
+			browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbarBorderTop');
+		});
+
 	});
 
 	describe('OLSKAppToolbarLanguageButton', function test_OLSKAppToolbarLanguageButton () {
