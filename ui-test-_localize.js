@@ -14,6 +14,10 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 				OLSKAppToolbarGuideURL: 'alfa',
 			});
 		});
+	
+		it('localizes OLSKAppToolbarLanguageButton', function() {
+			browser.assert.attribute(OLSKAppToolbarLanguageButton, 'title', uLocalized('OLSKAppToolbarLanguageButtonText'));
+		});
 
 		it('localizes OLSKAppToolbarGuideLink', function() {
 			browser.assert.text(OLSKAppToolbarGuideLink, uLocalized('OLSKAppToolbarGuideLinkText'));

@@ -10,9 +10,6 @@
     "// RELOAD BUTTON": null,
     "OLSKReloadButton": "olsk/OLSKReloadButton",
     
-    "// LANGUAGE SWITCHER": null,
-    "OLSKLanguageSwitcher": "olsk/OLSKLanguageSwitcher",
-    
     "// ASSETS": null,
     "OLSKUIAssets": "olsk/OLSKUIAssets",
 

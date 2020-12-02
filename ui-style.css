@@ -23,11 +23,6 @@
 	margin-left: 10px;
 }
 
-.OLSKAppToolbar :global(.OLSKLanguageSwitcher span) {
-	/* browser quirks */
-	padding-left: 4px;
-}
-
 .OLSKAppToolbarFundButton {
 	padding: 2px 4px;
 }

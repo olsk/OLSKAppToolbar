@@ -3,6 +3,9 @@ import RollupStart from './main.svelte';
 const OLSKAppToolbar = new RollupStart({
 	target: document.body,
 	props: Object.assign({
+		OLSKAppToolbarDispatchLanguage: (function  () {
+			window.TestOLSKAppToolbarDispatchLanguage.innerHTML = parseInt(window.TestOLSKAppToolbarDispatchLanguage.innerHTML) + 1;
+		}),
 		OLSKAppToolbarDispatchFund: (function  () {
 			window.TestOLSKAppToolbarDispatchFund.innerHTML = parseInt(window.TestOLSKAppToolbarDispatchFund.innerHTML) + 1;
 		}),
@@ -13,7 +16,7 @@ const OLSKAppToolbar = new RollupStart({
 			window.TestOLSKAppToolbarDispatchStorage.innerHTML = parseInt(window.TestOLSKAppToolbarDispatchStorage.innerHTML) + 1;
 		}),
 	}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).map(function (e, index, coll) {
-		if (['OLSKAppToolbarDispatchFund', 'OLSKAppToolbarFundShowProgress', 'OLSKAppToolbarDispatchLauncher', 'OLSKAppToolbarFundLimitText'].includes(e[0])) {
+		if (['OLSKAppToolbarDispatchLanguage', 'OLSKAppToolbarDispatchFund', 'OLSKAppToolbarFundShowProgress', 'OLSKAppToolbarDispatchLauncher', 'OLSKAppToolbarFundLimitText'].includes(e[0])) {
 			e[1] = JSON.parse(e[1]);
 		}
 

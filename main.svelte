@@ -3,6 +3,7 @@ export let OLSKAppToolbarGuideURL = '';
 export let OLSKAppToolbarStorageStatus = '';
 export let OLSKAppToolbarFundShowProgress = false;
 export let OLSKAppToolbarFundLimitText = '';
+export let OLSKAppToolbarDispatchLanguage = null;
 export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
 export let OLSKAppToolbarDispatchFund = null;
@@ -32,7 +33,7 @@ const mod = {
 };
 
 import OLSKReloadButton from 'OLSKReloadButton';
-import OLSKLanguageSwitcher from 'OLSKLanguageSwitcher';
+import _OLSKSharedLanguage from '../OLSKUIAssets/_OLSKSharedLanguage.svg';
 import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
 import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 </script>
@@ -43,10 +44,11 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 <div class="OLSKToolbarElementGroup">
 	<OLSKReloadButton />
 	
-	<OLSKLanguageSwitcher OLSKSharedActiveRouteConstant={ window.OLSKPublicConstants('OLSKSharedActiveRouteConstant') }
-		OLSKSharedPageLanguagesAvailable={ window.OLSKPublicConstants('OLSKSharedPageLanguagesAvailable') }
-		OLSKSharedPageCurrentLanguage={ window.OLSKPublicConstants('OLSKSharedPageCurrentLanguage') }
-		/>
+	{#if OLSKAppToolbarDispatchLanguage }
+		<button class="OLSKAppToolbarLanguageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchLanguage } class:OSWIconVisible={ false }>
+			<div class="OLSKAppToolbarLanguageButtonImage">{@html _OLSKSharedLanguage }</div>
+		</button>
+	{/if}
 
 	{#if OLSKAppToolbarGuideURL}
 		<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
