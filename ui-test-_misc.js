@@ -59,10 +59,10 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarStorageButtonImage', function test_OLSKAppToolbarStorageButtonImage () {
+	describe('OLSKAppToolbarLanguageButtonImage', function test_OLSKAppToolbarLanguageButtonImage () {
 
 		it('sets src', function () {
-			browser.assert.elements(`${ OLSKAppToolbarStorageButtonImage } #_OLSKSharedCloud`, 1);
+			browser.assert.elements(`${ OLSKAppToolbarLanguageButtonImage } #_OLSKSharedLanguage`, 1);
 		});
 
 	});
