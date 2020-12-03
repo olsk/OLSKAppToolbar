@@ -96,7 +96,7 @@ describe('OLSKAppToolbar_Access', function () {
 
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
-				OLSKAppToolbarGuideURL: 'alfa',
+				OLSKAppToolbarGuideURL: Math.random().toString(),
 			});
 		});
 

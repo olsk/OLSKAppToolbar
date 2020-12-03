@@ -3,7 +3,7 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 describe('OLSKAppToolbar_Misc', function () {
 
 	const item = {
-		OLSKAppToolbarGuideURL: 'alfa',
+		OLSKAppToolbarGuideURL: Math.random().toString(),
 		OLSKAppToolbarFundLimitText: Math.random().toString(),
 	};
 
@@ -70,7 +70,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarGuideLink', function test_OLSKAppToolbarGuideLink () {
 
 		it('sets href', function () {
-			browser.assert.attribute(OLSKAppToolbarGuideLink, 'href', 'alfa');
+			browser.assert.attribute(OLSKAppToolbarGuideLink, 'href', item.OLSKAppToolbarGuideURL);
 		});
 
 		it('sets target', function () {

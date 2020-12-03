@@ -11,7 +11,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
 				OLSKRoutingLanguage,
-				OLSKAppToolbarGuideURL: 'alfa',
+				OLSKAppToolbarGuideURL: Math.random().toString(),
 			});
 		});
 	
