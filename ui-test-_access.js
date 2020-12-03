@@ -3,6 +3,9 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 Object.entries({
 	OLSKAppToolbar: '.OLSKAppToolbar',
 
+	OLSKAppToolbarAproposButton: '.OLSKAppToolbarAproposButton',
+	OLSKAppToolbarAproposButtonImage: '.OLSKAppToolbarAproposButtonImage',
+
 	OLSKAppToolbarLanguageButton: '.OLSKAppToolbarLanguageButton',
 	OLSKAppToolbarLanguageButtonImage: '.OLSKAppToolbarLanguageButtonImage',
 	
@@ -26,6 +29,7 @@ describe('OLSKAppToolbar_Access', function () {
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
+			OLSKAppToolbarDispatchApropos: null,
 			OLSKAppToolbarDispatchLanguage: null,
 			OLSKAppToolbarDispatchFund: null,
 			OLSKAppToolbarDispatchLauncher: null,
@@ -38,6 +42,10 @@ describe('OLSKAppToolbar_Access', function () {
 
 	it('shows OLSKReloadButton', function () {
 		browser.assert.elements('.OLSKReloadButton', 1);
+	});
+
+	it('hides OLSKAppToolbarAproposButton', function () {
+		browser.assert.elements(OLSKAppToolbarAproposButton, 0);
 	});
 
 	it('hides OLSKAppToolbarLanguageButton', function () {
@@ -74,6 +82,26 @@ describe('OLSKAppToolbar_Access', function () {
 
 	it('hides OLSKAppToolbarLauncherButton', function () {
 		browser.assert.elements(OLSKAppToolbarLauncherButton, 0);
+	});
+
+	context('OLSKAppToolbarAproposButton', function () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute);
+		});
+
+		it('hides OLSKReloadButton', function () {
+			browser.assert.elements('.OLSKReloadButton', 0);
+		});
+
+		it('shows OLSKAppToolbarAproposButton', function () {
+			browser.assert.elements(OLSKAppToolbarAproposButton, 1);
+		});
+
+		it('shows OLSKAppToolbarAproposButtonImage', function () {
+			browser.assert.elements(OLSKAppToolbarAproposButtonImage, 1);
+		});
+	
 	});
 
 	context('OLSKAppToolbarLanguageButton', function () {

@@ -3,6 +3,7 @@ export let OLSKAppToolbarGuideURL = '';
 export let OLSKAppToolbarStorageStatus = '';
 export let OLSKAppToolbarFundShowProgress = false;
 export let OLSKAppToolbarFundLimitText = '';
+export let OLSKAppToolbarDispatchApropos = null;
 export let OLSKAppToolbarDispatchLanguage = null;
 export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
@@ -35,6 +36,7 @@ const mod = {
 };
 
 import OLSKReloadButton from 'OLSKReloadButton';
+import _OLSKSharedApropos from '../OLSKUIAssets/_OLSKSharedApropos.svg';
 import _OLSKSharedLanguage from '../OLSKUIAssets/_OLSKSharedLanguage.svg';
 import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
 import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
@@ -44,8 +46,14 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 <div class="OLSKAppToolbar OLSKToolbar OLSKToolbarJustify OLSKToolbarBorderTop">
 
 <div class="OLSKToolbarElementGroup">
-	<OLSKReloadButton />
-	
+	{#if OLSKAppToolbarDispatchApropos }
+		<button class="OLSKAppToolbarAproposButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarAproposButtonText') } on:click={ OLSKAppToolbarDispatchApropos }>
+			<div class="OLSKAppToolbarAproposButtonImage">{@html _OLSKSharedApropos }</div>
+		</button>
+	{:else}
+		<OLSKReloadButton />
+	{/if}
+
 	{#if OLSKAppToolbarDispatchLanguage }
 		<button class="OLSKAppToolbarLanguageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchLanguage }>
 			<div class="OLSKAppToolbarLanguageButtonImage">{@html _OLSKSharedLanguage }</div>

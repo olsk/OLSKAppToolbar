@@ -27,6 +27,46 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
+	describe('OLSKAppToolbarAproposButton', function test_OLSKAppToolbarAproposButton () {
+
+		it('classes OLSKLayoutButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKLayoutButtonNoStyle');
+		});
+
+		it('classes OLSKLayoutElementTappable', function () {
+			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKLayoutElementTappable');
+		});
+
+		it('classes OLSKToolbarButton', function () {
+			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKToolbarButton');
+		});
+	
+		context('click', function () {
+
+			before(function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchApropos', '0');
+			});
+
+			before(function () {
+				browser.click(OLSKAppToolbarAproposButton);
+			});
+	
+			it('sends OLSKAppToolbarDispatchApropos', function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchApropos', '1');
+			});
+	
+		});
+
+	});
+
+	describe('OLSKAppToolbarAproposButtonImage', function test_OLSKAppToolbarAproposButtonImage () {
+
+		it('sets src', function () {
+			browser.assert.elements(`${ OLSKAppToolbarAproposButtonImage } #_OLSKSharedApropos`, 1);
+		});
+
+	});
+
 	describe('OLSKAppToolbarLanguageButton', function test_OLSKAppToolbarLanguageButton () {
 
 		it('classes OLSKLayoutButtonNoStyle', function () {

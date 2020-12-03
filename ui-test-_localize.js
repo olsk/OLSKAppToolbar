@@ -15,6 +15,10 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			});
 		});
 	
+		it('localizes OLSKAppToolbarAproposButton', function() {
+			browser.assert.attribute(OLSKAppToolbarAproposButton, 'title', uLocalized('OLSKAppToolbarAproposButtonText'));
+		});
+
 		it('localizes OLSKAppToolbarLanguageButton', function() {
 			browser.assert.attribute(OLSKAppToolbarLanguageButton, 'title', uLocalized('OLSKAppToolbarLanguageButtonText'));
 		});
