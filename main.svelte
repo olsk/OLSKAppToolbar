@@ -16,6 +16,7 @@ const mod = {
 
 	InterfaceWindowDidKeydown (event) {
 		const handlerFunctions = {
+
 			Space () {
 				if (!event.altKey) {
 					return
@@ -25,6 +26,7 @@ const mod = {
 
 				return event.preventDefault();
 			},
+			
 		};
 
 		handlerFunctions[event.code] && handlerFunctions[event.code]();
@@ -45,7 +47,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 	<OLSKReloadButton />
 	
 	{#if OLSKAppToolbarDispatchLanguage }
-		<button class="OLSKAppToolbarLanguageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchLanguage } class:OSWIconVisible={ false }>
+		<button class="OLSKAppToolbarLanguageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchLanguage }>
 			<div class="OLSKAppToolbarLanguageButtonImage">{@html _OLSKSharedLanguage }</div>
 		</button>
 	{/if}
