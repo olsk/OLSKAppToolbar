@@ -4,7 +4,7 @@ export let OLSKAppToolbarStorageStatus = '';
 export let OLSKAppToolbarFundShowProgress = false;
 export let OLSKAppToolbarFundLimitText = '';
 export let OLSKAppToolbarDispatchApropos = null;
-export let OLSKAppToolbarDispatchLanguage = null;
+export let OLSKAppToolbarDispatchTongue = null;
 export let OLSKAppToolbarDispatchLauncher = null;
 export let OLSKAppToolbarDispatchStorage;
 export let OLSKAppToolbarDispatchFund = null;
@@ -54,8 +54,8 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 		<OLSKReloadButton />
 	{/if}
 
-	{#if OLSKAppToolbarDispatchLanguage }
-		<button class="OLSKAppToolbarLanguageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchLanguage }>
+	{#if OLSKAppToolbarDispatchTongue }
+		<button class="OLSKAppToolbarLanguageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchTongue }>
 			<div class="OLSKAppToolbarLanguageButtonImage">{@html _OLSKSharedLanguage }</div>
 		</button>
 	{/if}

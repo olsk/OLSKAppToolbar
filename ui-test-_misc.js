@@ -84,15 +84,15 @@ describe('OLSKAppToolbar_Misc', function () {
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchLanguage', '0');
+				browser.assert.text('#TestOLSKAppToolbarDispatchTongue', '0');
 			});
 
 			before(function () {
 				browser.click(OLSKAppToolbarLanguageButton);
 			});
 	
-			it('sends OLSKAppToolbarDispatchLanguage', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchLanguage', '1');
+			it('sends OLSKAppToolbarDispatchTongue', function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchTongue', '1');
 			});
 	
 		});

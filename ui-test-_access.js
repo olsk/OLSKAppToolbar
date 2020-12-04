@@ -30,7 +30,7 @@ describe('OLSKAppToolbar_Access', function () {
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKAppToolbarDispatchApropos: null,
-			OLSKAppToolbarDispatchLanguage: null,
+			OLSKAppToolbarDispatchTongue: null,
 			OLSKAppToolbarDispatchFund: null,
 			OLSKAppToolbarDispatchLauncher: null,
 		});
