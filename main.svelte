@@ -43,7 +43,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 </script>
 <svelte:window on:keydown={ mod.InterfaceWindowDidKeydown } />
 
-<div class="OLSKAppToolbar OLSKToolbar OLSKToolbarJustify OLSKToolbarBorderTop">
+<div class="OLSKAppToolbar OLSKToolbar OLSKToolbarJustify OLSKCommonEdgeTop">
 
 <div class="OLSKToolbarElementGroup">
 	{#if OLSKAppToolbarDispatchApropos }

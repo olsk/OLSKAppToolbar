@@ -21,8 +21,8 @@ describe('OLSKAppToolbar_Misc', function () {
 			browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbarJustify');
 		});
 
-		it('classes OLSKToolbarBorderTop', function () {
-			browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbarBorderTop');
+		it('classes OLSKCommonEdgeTop', function () {
+			browser.assert.hasClass(OLSKAppToolbar, 'OLSKCommonEdgeTop');
 		});
 
 	});
