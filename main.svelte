@@ -47,7 +47,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 
 <div class="OLSKToolbarElementGroup">
 	{#if OLSKAppToolbarDispatchApropos }
-		<button class="OLSKAppToolbarAproposButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarAproposButtonText') } on:click={ OLSKAppToolbarDispatchApropos }>
+		<button class="OLSKAppToolbarAproposButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarAproposButtonText') } on:click={ OLSKAppToolbarDispatchApropos }>
 			<div class="OLSKAppToolbarAproposButtonImage">{@html _OLSKSharedApropos }</div>
 		</button>
 	{:else}
@@ -55,7 +55,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 	{/if}
 
 	{#if OLSKAppToolbarDispatchTongue }
-		<button class="OLSKAppToolbarLanguageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchTongue }>
+		<button class="OLSKAppToolbarLanguageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchTongue }>
 			<div class="OLSKAppToolbarLanguageButtonImage">{@html _OLSKSharedLanguage }</div>
 		</button>
 	{/if}
@@ -72,7 +72,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 
 			{#if OLSKAppToolbarFundLimitText !== '' }
 				<!-- #hotfix svelte rendering issue resolves with button  -->
-				<button class="OLSKAppToolbarFundLimit OLSKLayoutButtonNoStyle" disabled>{ OLSKAppToolbarFundLimitText.toString() }</button>
+				<button class="OLSKAppToolbarFundLimit OLSKDecorButtonNoStyle" disabled>{ OLSKAppToolbarFundLimitText.toString() }</button>
 			{/if}
 		{/if}
 
@@ -85,12 +85,12 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 <div class="OLSKToolbarElementGroup">
 	<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
 
-	<button class="OLSKAppToolbarStorageButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage } class:OSWIconVisible={ false }>
+	<button class="OLSKAppToolbarStorageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage } class:OSWIconVisible={ false }>
 		<div class="OLSKAppToolbarStorageButtonImage">{@html _OLSKSharedCloud }</div>
 	</button>
 
 	{#if OLSKAppToolbarDispatchLauncher }
-		<button class="OLSKAppToolbarLauncherButton OLSKLayoutButtonNoStyle OLSKLayoutElementTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher } class:OSWIconVisible={ false }>
+		<button class="OLSKAppToolbarLauncherButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher } class:OSWIconVisible={ false }>
 			<div class="OLSKAppToolbarLauncherButtonImage">{@html _OLSKSharedLauncher }</div>
 		</button>
 	{/if}

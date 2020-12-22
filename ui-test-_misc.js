@@ -29,12 +29,12 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	describe('OLSKAppToolbarAproposButton', function test_OLSKAppToolbarAproposButton () {
 
-		it('classes OLSKLayoutButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKLayoutButtonNoStyle');
+		it('classes OLSKDecorButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKDecorButtonNoStyle');
 		});
 
-		it('classes OLSKLayoutElementTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKLayoutElementTappable');
+		it('classes OLSKDecorTappable', function () {
+			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
@@ -69,12 +69,12 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	describe('OLSKAppToolbarLanguageButton', function test_OLSKAppToolbarLanguageButton () {
 
-		it('classes OLSKLayoutButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKLayoutButtonNoStyle');
+		it('classes OLSKDecorButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKDecorButtonNoStyle');
 		});
 
-		it('classes OLSKLayoutElementTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKLayoutElementTappable');
+		it('classes OLSKDecorTappable', function () {
+			browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
@@ -181,12 +181,12 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	describe('OLSKAppToolbarStorageButton', function test_OLSKAppToolbarStorageButton () {
 
-		it('classes OLSKLayoutButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKLayoutButtonNoStyle');
+		it('classes OLSKDecorButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKDecorButtonNoStyle');
 		});
 
-		it('classes OLSKLayoutElementTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKLayoutElementTappable');
+		it('classes OLSKDecorTappable', function () {
+			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
@@ -221,12 +221,12 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	describe('OLSKAppToolbarLauncherButton', function test_OLSKAppToolbarLauncherButton () {
 
-		it('classes OLSKLayoutButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKLayoutButtonNoStyle');
+		it('classes OLSKDecorButtonNoStyle', function () {
+			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKDecorButtonNoStyle');
 		});
 
-		it('classes OLSKLayoutElementTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKLayoutElementTappable');
+		it('classes OLSKDecorTappable', function () {
+			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
