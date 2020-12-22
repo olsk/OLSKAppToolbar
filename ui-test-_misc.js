@@ -121,8 +121,8 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	describe('OLSKAppToolbarFundButton', function test_OLSKAppToolbarFundButton () {
 
-		it('classes OLSKCommonButton', function () {
-			browser.assert.hasClass(OLSKAppToolbarFundButton, 'OLSKCommonButton');
+		it('classes OLSKDecorPress', function () {
+			browser.assert.hasClass(OLSKAppToolbarFundButton, 'OLSKDecorPress');
 		});
 
 		context('click', function () {
