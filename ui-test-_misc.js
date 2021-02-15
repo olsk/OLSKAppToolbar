@@ -217,6 +217,35 @@ describe('OLSKAppToolbar_Misc', function () {
 			browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloud`, 1);
 		});
 
+		context('offline', function () {
+
+			before(function() {
+				return browser.OLSKVisit(kDefaultRoute, {
+					OLSKAppToolbarCloudOffline: true,
+				});
+			});
+
+			it('sets src', function () {
+				browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloudOffline`, 1);
+			});
+		
+		});
+
+		context('error', function () {
+
+			before(function() {
+				return browser.OLSKVisit(kDefaultRoute, {
+					OLSKAppToolbarCloudOffline: true,
+					OLSKAppToolbarCloudError: true,
+				});
+			});
+
+			it('sets src', function () {
+				browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloudError`, 1);
+			});
+		
+		});
+
 	});
 
 	describe('OLSKAppToolbarLauncherButton', function test_OLSKAppToolbarLauncherButton () {

@@ -1,6 +1,8 @@
 <script>
 export let OLSKAppToolbarGuideURL = '';
 export let OLSKAppToolbarCloudStatus = '';
+export let OLSKAppToolbarCloudOffline = false;
+export let OLSKAppToolbarCloudError = false;
 export let OLSKAppToolbarFundShowProgress = false;
 export let OLSKAppToolbarFundLimitText = '';
 export let OLSKAppToolbarDispatchApropos = null;
@@ -83,7 +85,7 @@ import OLSKUIAssets from 'OLSKUIAssets';
 	<div class="OLSKAppToolbarCloudStatus">{ OLSKAppToolbarCloudStatus }</div>
 
 	<button class="OLSKAppToolbarStorageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage }>
-		<div class="OLSKAppToolbarCloudButtonImage">{@html OLSKUIAssets._OLSKSharedCloud }</div>
+		<div class="OLSKAppToolbarCloudButtonImage">{@html OLSKAppToolbarCloudError ? OLSKUIAssets._OLSKSharedCloudError : (OLSKAppToolbarCloudOffline ? OLSKUIAssets._OLSKSharedCloudOffline : OLSKUIAssets._OLSKSharedCloud) }</div>
 	</button>
 
 	{#if OLSKAppToolbarDispatchLauncher }
