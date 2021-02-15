@@ -86,7 +86,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 	<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
 
 	<button class="OLSKAppToolbarStorageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage }>
-		<div class="OLSKAppToolbarStorageButtonImage">{@html _OLSKSharedCloud }</div>
+		<div class="OLSKAppToolbarCloudButtonImage">{@html _OLSKSharedCloud }</div>
 	</button>
 
 	{#if OLSKAppToolbarDispatchLauncher }

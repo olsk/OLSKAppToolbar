@@ -17,7 +17,7 @@ Object.entries({
 	
 	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
 	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
-	OLSKAppToolbarStorageButtonImage: '.OLSKAppToolbarStorageButtonImage',
+	OLSKAppToolbarCloudButtonImage: '.OLSKAppToolbarCloudButtonImage',
 
 	OLSKAppToolbarLauncherButton: '.OLSKAppToolbarLauncherButton',
 	OLSKAppToolbarLauncherButtonImage: '.OLSKAppToolbarLauncherButtonImage',
@@ -76,8 +76,8 @@ describe('OLSKAppToolbar_Access', function () {
 		browser.assert.elements(OLSKAppToolbarStorageButton, 1);
 	});
 
-	it('shows OLSKAppToolbarStorageButtonImage', function () {
-		browser.assert.elements(OLSKAppToolbarStorageButtonImage, 1);
+	it('shows OLSKAppToolbarCloudButtonImage', function () {
+		browser.assert.elements(OLSKAppToolbarCloudButtonImage, 1);
 	});
 
 	it('hides OLSKAppToolbarLauncherButton', function () {

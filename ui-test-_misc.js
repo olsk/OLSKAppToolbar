@@ -211,10 +211,10 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarStorageButtonImage', function test_OLSKAppToolbarStorageButtonImage () {
+	describe('OLSKAppToolbarCloudButtonImage', function test_OLSKAppToolbarCloudButtonImage () {
 
 		it('sets src', function () {
-			browser.assert.elements(`${ OLSKAppToolbarStorageButtonImage } #_OLSKSharedCloud`, 1);
+			browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloud`, 1);
 		});
 
 	});
