@@ -85,12 +85,12 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 <div class="OLSKToolbarElementGroup">
 	<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
 
-	<button class="OLSKAppToolbarStorageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage } class:OSWIconVisible={ false }>
+	<button class="OLSKAppToolbarStorageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage }>
 		<div class="OLSKAppToolbarStorageButtonImage">{@html _OLSKSharedCloud }</div>
 	</button>
 
 	{#if OLSKAppToolbarDispatchLauncher }
-		<button class="OLSKAppToolbarLauncherButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher } class:OSWIconVisible={ false }>
+		<button class="OLSKAppToolbarLauncherButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher }>
 			<div class="OLSKAppToolbarLauncherButtonImage">{@html _OLSKSharedLauncher }</div>
 		</button>
 	{/if}

@@ -31,10 +31,6 @@
 	margin: 4px;
 }
 
-.OLSKAppToolbarStorageButton.OSWIconVisible .OLSKAppToolbarStorageButtonImage {
-	display: none;
-}
-
 .OLSKAppToolbarStorageButton :global(.OSWOptionImage path) {
 	fill: black;
 }
