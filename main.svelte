@@ -36,10 +36,7 @@ const mod = {
 };
 
 import OLSKReloadButton from 'OLSKReloadButton';
-import _OLSKSharedApropos from '../OLSKUIAssets/_OLSKSharedApropos.svg';
-import _OLSKSharedLanguage from '../OLSKUIAssets/_OLSKSharedLanguage.svg';
-import _OLSKSharedCloud from '../OLSKUIAssets/_OLSKSharedCloud.svg';
-import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
+import OLSKUIAssets from 'OLSKUIAssets';
 </script>
 <svelte:window on:keydown={ mod.InterfaceWindowDidKeydown } />
 
@@ -48,7 +45,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 <div class="OLSKToolbarElementGroup">
 	{#if OLSKAppToolbarDispatchApropos }
 		<button class="OLSKAppToolbarAproposButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarAproposButtonText') } on:click={ OLSKAppToolbarDispatchApropos }>
-			<div class="OLSKAppToolbarAproposButtonImage">{@html _OLSKSharedApropos }</div>
+			<div class="OLSKAppToolbarAproposButtonImage">{@html OLSKUIAssets._OLSKSharedApropos }</div>
 		</button>
 	{:else}
 		<OLSKReloadButton />
@@ -56,7 +53,7 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 
 	{#if OLSKAppToolbarDispatchTongue }
 		<button class="OLSKAppToolbarLanguageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLanguageButtonText') } on:click={ OLSKAppToolbarDispatchTongue }>
-			<div class="OLSKAppToolbarLanguageButtonImage">{@html _OLSKSharedLanguage }</div>
+			<div class="OLSKAppToolbarLanguageButtonImage">{@html OLSKUIAssets._OLSKSharedLanguage }</div>
 		</button>
 	{/if}
 
@@ -86,12 +83,12 @@ import _OLSKSharedLauncher from '../OLSKUIAssets/_OLSKSharedLauncher.svg';
 	<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
 
 	<button class="OLSKAppToolbarStorageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage }>
-		<div class="OLSKAppToolbarCloudButtonImage">{@html _OLSKSharedCloud }</div>
+		<div class="OLSKAppToolbarCloudButtonImage">{@html OLSKUIAssets._OLSKSharedCloud }</div>
 	</button>
 
 	{#if OLSKAppToolbarDispatchLauncher }
 		<button class="OLSKAppToolbarLauncherButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher }>
-			<div class="OLSKAppToolbarLauncherButtonImage">{@html _OLSKSharedLauncher }</div>
+			<div class="OLSKAppToolbarLauncherButtonImage">{@html OLSKUIAssets._OLSKSharedLauncher }</div>
 		</button>
 	{/if}
 </div>
