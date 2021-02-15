@@ -165,16 +165,16 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarStorageStatus', function test_OLSKAppToolbarStorageStatus () {
+	describe('OLSKAppToolbarCloudStatus', function test_OLSKAppToolbarCloudStatus () {
 
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
-				OLSKAppToolbarStorageStatus: 'alfa',
+				OLSKAppToolbarCloudStatus: 'alfa',
 			});
 		});
 
-		it('binds OLSKAppToolbarStorageStatus', function () {
-			browser.assert.text(OLSKAppToolbarStorageStatus, 'alfa');
+		it('binds OLSKAppToolbarCloudStatus', function () {
+			browser.assert.text(OLSKAppToolbarCloudStatus, 'alfa');
 		});
 
 	});

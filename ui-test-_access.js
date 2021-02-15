@@ -15,7 +15,7 @@ Object.entries({
 	OLSKAppToolbarFundProgress: '.OLSKAppToolbarFundProgress',
 	OLSKAppToolbarFundLimit: '.OLSKAppToolbarFundLimit',
 	
-	OLSKAppToolbarStorageStatus: '.OLSKAppToolbarStorageStatus',
+	OLSKAppToolbarCloudStatus: '.OLSKAppToolbarCloudStatus',
 	OLSKAppToolbarStorageButton: '.OLSKAppToolbarStorageButton',
 	OLSKAppToolbarCloudButtonImage: '.OLSKAppToolbarCloudButtonImage',
 
@@ -68,8 +68,8 @@ describe('OLSKAppToolbar_Access', function () {
 		browser.assert.elements(OLSKAppToolbarFundLimit, 0);
 	});
 
-	it('shows OLSKAppToolbarStorageStatus', function () {
-		browser.assert.elements(OLSKAppToolbarStorageStatus, 1);
+	it('shows OLSKAppToolbarCloudStatus', function () {
+		browser.assert.elements(OLSKAppToolbarCloudStatus, 1);
 	});
 
 	it('shows OLSKAppToolbarStorageButton', function () {

@@ -1,6 +1,6 @@
 <script>
 export let OLSKAppToolbarGuideURL = '';
-export let OLSKAppToolbarStorageStatus = '';
+export let OLSKAppToolbarCloudStatus = '';
 export let OLSKAppToolbarFundShowProgress = false;
 export let OLSKAppToolbarFundLimitText = '';
 export let OLSKAppToolbarDispatchApropos = null;
@@ -80,7 +80,7 @@ import OLSKUIAssets from 'OLSKUIAssets';
 </div>
 
 <div class="OLSKToolbarElementGroup">
-	<div class="OLSKAppToolbarStorageStatus">{ OLSKAppToolbarStorageStatus }</div>
+	<div class="OLSKAppToolbarCloudStatus">{ OLSKAppToolbarCloudStatus }</div>
 
 	<button class="OLSKAppToolbarStorageButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarStorageButtonText') } on:click={ OLSKAppToolbarDispatchStorage }>
 		<div class="OLSKAppToolbarCloudButtonImage">{@html OLSKUIAssets._OLSKSharedCloud }</div>
