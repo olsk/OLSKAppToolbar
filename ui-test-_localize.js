@@ -39,6 +39,62 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.attribute(OLSKAppToolbarLauncherButton, 'title', uLocalized('OLSKAppToolbarLauncherButtonText'));
 		});
 
+		describe('OLSKAppToolbarCloudStatus', function test_OLSKAppToolbarCloudStatus () {
+
+			it('sets text', function () {
+				browser.assert.text(OLSKAppToolbarCloudStatus, '');
+			});
+
+			context('online', function () {
+
+				before(function() {
+					return browser.OLSKVisit(kDefaultRoute, {
+						OLSKRoutingLanguage,
+						OLSKAppToolbarCloudConnected: true,
+					});
+				});
+
+				it('sets src', function () {
+					browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusOnline'));
+				});
+			
+			});
+
+			context('offline', function () {
+
+				before(function() {
+					return browser.OLSKVisit(kDefaultRoute, {
+						OLSKRoutingLanguage,
+						OLSKAppToolbarCloudConnected: true,
+						OLSKAppToolbarCloudOffline: true,
+					});
+				});
+
+				it('sets src', function () {
+					browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusOffline'));
+				});
+			
+			});
+
+			context('error', function () {
+
+				before(function() {
+					return browser.OLSKVisit(kDefaultRoute, {
+						OLSKRoutingLanguage,
+						OLSKAppToolbarCloudConnected: true,
+						OLSKAppToolbarCloudOffline: true,
+						OLSKAppToolbarCloudError: true,
+					});
+				});
+
+				it('sets src', function () {
+					browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusError'));
+				});
+			
+			});
+
+		});
+
 	});
 
 });
