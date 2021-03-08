@@ -165,18 +165,18 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarStorageButton', function test_OLSKAppToolbarStorageButton () {
+	describe('OLSKAppToolbarCloudButton', function test_OLSKAppToolbarCloudButton () {
 
 		it('classes OLSKDecorButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKDecorButtonNoStyle');
+			browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKDecorButtonNoStyle');
 		});
 
 		it('classes OLSKDecorTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKDecorTappable');
+			browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
-			browser.assert.hasClass(OLSKAppToolbarStorageButton, 'OLSKToolbarButton');
+			browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKToolbarButton');
 		});
 	
 		context('click', function () {
@@ -186,7 +186,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 
 			before(function () {
-				browser.click(OLSKAppToolbarStorageButton);
+				browser.click(OLSKAppToolbarCloudButton);
 			});
 	
 			it('sends OLSKAppToolbarDispatchStorage', function () {

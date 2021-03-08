@@ -31,8 +31,8 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.text(OLSKAppToolbarFundButton, uLocalized('OLSKAppToolbarFundButtonText'));
 		});
 	
-		it('localizes OLSKAppToolbarStorageButton', function() {
-			browser.assert.attribute(OLSKAppToolbarStorageButton, 'title', uLocalized('OLSKAppToolbarStorageButtonText'));
+		it('localizes OLSKAppToolbarCloudButton', function() {
+			browser.assert.attribute(OLSKAppToolbarCloudButton, 'title', uLocalized('OLSKAppToolbarCloudButtonText'));
 		});
 	
 		it('localizes OLSKAppToolbarLauncherButton', function() {
