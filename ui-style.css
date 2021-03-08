@@ -30,7 +30,3 @@
 	/* #hotfix .OLSKToolbarElementGroup button */
 	margin: 4px;
 }
-
-.OLSKAppToolbarStorageButton :global(.OSWOptionImage path) {
-	fill: black;
-}
