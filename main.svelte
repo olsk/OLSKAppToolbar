@@ -1,15 +1,15 @@
 <script>
 export let OLSKAppToolbarGuideURL = '';
+export let OLSKAppToolbarFundShowProgress = false;
+export let OLSKAppToolbarFundLimitText = '';
 export let OLSKAppToolbarCloudConnected = false;
 export let OLSKAppToolbarCloudOffline = false;
 export let OLSKAppToolbarCloudError = false;
-export let OLSKAppToolbarFundShowProgress = false;
-export let OLSKAppToolbarFundLimitText = '';
 export let OLSKAppToolbarDispatchApropos = null;
 export let OLSKAppToolbarDispatchTongue = null;
-export let OLSKAppToolbarDispatchLauncher = null;
-export let OLSKAppToolbarDispatchStorage;
 export let OLSKAppToolbarDispatchFund = null;
+export let OLSKAppToolbarDispatchStorage;
+export let OLSKAppToolbarDispatchLauncher = null;
 
 import { OLSKLocalized } from 'OLSKInternational';
 
