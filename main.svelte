@@ -8,7 +8,7 @@ export let OLSKAppToolbarCloudError = false;
 export let OLSKAppToolbarDispatchApropos = null;
 export let OLSKAppToolbarDispatchTongue = null;
 export let OLSKAppToolbarDispatchFund = null;
-export let OLSKAppToolbarDispatchStorage;
+export let OLSKAppToolbarDispatchCloud;
 export let OLSKAppToolbarDispatchLauncher = null;
 
 import { OLSKLocalized } from 'OLSKInternational';
@@ -84,7 +84,7 @@ import OLSKUIAssets from 'OLSKUIAssets';
 <div class="OLSKToolbarElementGroup">
 	<div class="OLSKAppToolbarCloudStatus">{ !OLSKAppToolbarCloudConnected ? '' : (OLSKAppToolbarCloudError ? OLSKLocalized('OLSKAppToolbarCloudStatusError') : (OLSKAppToolbarCloudOffline ? OLSKLocalized('OLSKAppToolbarCloudStatusOffline') : OLSKLocalized('OLSKAppToolbarCloudStatusOnline'))) }</div>
 
-	<button class="OLSKAppToolbarCloudButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarCloudButtonText') } on:click={ OLSKAppToolbarDispatchStorage }>
+	<button class="OLSKAppToolbarCloudButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarCloudButtonText') } on:click={ OLSKAppToolbarDispatchCloud }>
 		<div class="OLSKAppToolbarCloudButtonImage">{@html OLSKAppToolbarCloudError ? OLSKUIAssets._OLSKSharedCloudError : (OLSKAppToolbarCloudOffline ? OLSKUIAssets._OLSKSharedCloudOffline : OLSKUIAssets._OLSKSharedCloud) }</div>
 	</button>
 

@@ -182,15 +182,15 @@ describe('OLSKAppToolbar_Misc', function () {
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchStorage', '0');
+				browser.assert.text('#TestOLSKAppToolbarDispatchCloud', '0');
 			});
 
 			before(function () {
 				browser.click(OLSKAppToolbarCloudButton);
 			});
 	
-			it('sends OLSKAppToolbarDispatchStorage', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchStorage', '1');
+			it('sends OLSKAppToolbarDispatchCloud', function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchCloud', '1');
 			});
 	
 		});
