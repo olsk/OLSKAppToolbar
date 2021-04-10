@@ -1,4 +1,6 @@
 .OLSKAppToolbar {
+	color: var(--OLSKCommonForeground);
+
 	/* AppContainerFlexbox:Child */
 	flex-shrink: 0;
 
