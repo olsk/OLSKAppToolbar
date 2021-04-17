@@ -1,11 +1,13 @@
 .OLSKAppToolbar {
-	color: var(--OLSKCommonForeground);
-
 	/* AppContainerFlexbox:Child */
 	flex-shrink: 0;
 
 	/* OLSKToolbarFlexbox:Parent */
 	justify-content: space-between;
+}
+
+.OLSKAppToolbar * {
+	color: var(--OLSKCommonForeground);	
 }
 
 .OLSKAppToolbar a {
@@ -28,7 +30,7 @@
 	margin: 0;
 }
 
-.OLSKAppToolbarFundLimit {
+.OLSKAppToolbarFundLimit {	
 	/* #hotfix .OLSKToolbarElementGroup button */
 	margin: 4px;
 }
