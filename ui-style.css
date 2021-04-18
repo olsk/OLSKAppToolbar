@@ -6,7 +6,7 @@
 	justify-content: space-between;
 }
 
-.OLSKAppToolbar * {
+.OLSKAppToolbar *:not(.OLSKAppToolbarFundButton) {
 	color: var(--OLSKCommonForeground);	
 }
 
