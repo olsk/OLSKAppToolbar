@@ -1,19 +1,8 @@
 {
   "name": "OLSKAppToolbar",
   "main": "main.svelte",
-  "scripts": {
-    "start": "olsk-express .",
-    "test": "olsk-spec"
-  },
   "dependencies": {
     "OLSKReloadButton": "olsk/OLSKReloadButton",
-    "OLSKUIAssets": "olsk/OLSKUIAssets",
-    "// I sacrifice myself for the commas of others": null
-  },
-  "devDependencies": {
-    "OLSKRollupScaffold": "olsk/OLSKRollupScaffold",
-    "OLSKSpec": "olsk/OLSKSpec",
-    "OLSKRouting": "olsk/OLSKRouting",
-    "// I sacrifice myself for the commas of others": null
+    "OLSKUIAssets": "olsk/OLSKUIAssets"
   }
 }
