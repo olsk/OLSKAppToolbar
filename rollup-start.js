@@ -18,8 +18,8 @@ const OLSKAppToolbar = new RollupStart({
 		OLSKAppToolbarDispatchLauncher: (function  () {
 			window.TestOLSKAppToolbarDispatchLauncher.innerHTML = parseInt(window.TestOLSKAppToolbarDispatchLauncher.innerHTML) + 1;
 		}),
-	}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).map(function (e, index, coll) {
-		if (['OLSKAppToolbarDispatchApropos', 'OLSKAppToolbarDispatchTongue', 'OLSKAppToolbarDispatchFund', 'OLSKAppToolbarFundShowProgress', 'OLSKAppToolbarDispatchLauncher', 'OLSKAppToolbarFundLimitText'].includes(e[0])) {
+	}, Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).map(function (e) {
+		if (['OLSKAppToolbarDispatchApropos', 'OLSKAppToolbarDispatchTongue', 'OLSKAppToolbarDispatchFund', 'OLSKAppToolbarFundShowProgress', 'OLSKAppToolbarDispatchLauncher', 'OLSKAppToolbarFundLimitText'].includes(e[0]) && e[1].trim()) {
 			e[1] = JSON.parse(e[1]);
 		}
 
