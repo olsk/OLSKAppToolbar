@@ -22,7 +22,7 @@ Object.entries({
 	OLSKAppToolbarLauncherButton: '.OLSKAppToolbarLauncherButton',
 	OLSKAppToolbarLauncherButtonImage: '.OLSKAppToolbarLauncherButtonImage',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 describe('OLSKAppToolbar_Access', function () {
