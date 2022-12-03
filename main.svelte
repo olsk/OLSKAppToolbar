@@ -60,7 +60,7 @@ import OLSKUIAssets from 'OLSKUIAssets';
 	{/if}
 
 	{#if OLSKAppToolbarGuideURL}
-		<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
+		<a class="OLSKAppToolbarGuideLink" href={ OLSKAppToolbarGuideURL } target="_blank" rel="noreferrer">{ OLSKLocalized('OLSKAppToolbarGuideLinkText') }</a>
 	{/if}
 
 	<slot></slot>
