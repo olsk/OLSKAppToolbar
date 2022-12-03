@@ -8,7 +8,7 @@ export let OLSKAppToolbarCloudError = false;
 export let OLSKAppToolbarDispatchApropos = null;
 export let OLSKAppToolbarDispatchTongue = null;
 export let OLSKAppToolbarDispatchFund = null;
-export let OLSKAppToolbarDispatchCloud;
+export let OLSKAppToolbarDispatchCloud = null;
 export let OLSKAppToolbarDispatchLauncher = null;
 
 import { OLSKLocalized } from 'OLSKInternational';
