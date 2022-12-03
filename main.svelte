@@ -84,11 +84,13 @@ import OLSKUIAssets from 'OLSKUIAssets';
 </div>
 
 <div class="OLSKToolbarElementGroup">
-	<div class="OLSKAppToolbarCloudStatus">{ !OLSKAppToolbarCloudConnected ? '' : (OLSKAppToolbarCloudError ? OLSKLocalized('OLSKAppToolbarCloudStatusError') : (OLSKAppToolbarCloudOffline ? OLSKLocalized('OLSKAppToolbarCloudStatusOffline') : OLSKLocalized('OLSKAppToolbarCloudStatusOnline'))) }</div>
+	{#if OLSKAppToolbarDispatchCloud }
+		<div class="OLSKAppToolbarCloudStatus">{ !OLSKAppToolbarCloudConnected ? '' : (OLSKAppToolbarCloudError ? OLSKLocalized('OLSKAppToolbarCloudStatusError') : (OLSKAppToolbarCloudOffline ? OLSKLocalized('OLSKAppToolbarCloudStatusOffline') : OLSKLocalized('OLSKAppToolbarCloudStatusOnline'))) }</div>
 
-	<button class="OLSKAppToolbarCloudButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarCloudButtonText') } on:click={ OLSKAppToolbarDispatchCloud }>
-		<div class="OLSKAppToolbarCloudButtonImage">{@html OLSKAppToolbarCloudError ? OLSKUIAssets._OLSKSharedCloudError : (OLSKAppToolbarCloudOffline ? OLSKUIAssets._OLSKSharedCloudOffline : OLSKUIAssets._OLSKSharedCloud) }</div>
-	</button>
+		<button class="OLSKAppToolbarCloudButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarCloudButtonText') } on:click={ OLSKAppToolbarDispatchCloud }>
+			<div class="OLSKAppToolbarCloudButtonImage">{@html OLSKAppToolbarCloudError ? OLSKUIAssets._OLSKSharedCloudError : (OLSKAppToolbarCloudOffline ? OLSKUIAssets._OLSKSharedCloudOffline : OLSKUIAssets._OLSKSharedCloud) }</div>
+		</button>
+	{/if}
 
 	{#if OLSKAppToolbarDispatchLauncher }
 		<button class="OLSKAppToolbarLauncherButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarLauncherButtonText') } on:click={ OLSKAppToolbarDispatchLauncher }>

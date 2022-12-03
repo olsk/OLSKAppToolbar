@@ -32,6 +32,7 @@ describe('OLSKAppToolbar_Access', function () {
 			OLSKAppToolbarDispatchApropos: null,
 			OLSKAppToolbarDispatchTongue: null,
 			OLSKAppToolbarDispatchFund: null,
+			OLSKAppToolbarDispatchCloud: null,
 			OLSKAppToolbarDispatchLauncher: null,
 		});
 	});
@@ -68,16 +69,12 @@ describe('OLSKAppToolbar_Access', function () {
 		browser.assert.elements(OLSKAppToolbarFundLimit, 0);
 	});
 
-	it('shows OLSKAppToolbarCloudStatus', function () {
-		browser.assert.elements(OLSKAppToolbarCloudStatus, 1);
+	it('hides OLSKAppToolbarCloudStatus', function () {
+		browser.assert.elements(OLSKAppToolbarCloudStatus, 0);
 	});
 
-	it('shows OLSKAppToolbarCloudButton', function () {
-		browser.assert.elements(OLSKAppToolbarCloudButton, 1);
-	});
-
-	it('shows OLSKAppToolbarCloudButtonImage', function () {
-		browser.assert.elements(OLSKAppToolbarCloudButtonImage, 1);
+	it('hides OLSKAppToolbarCloudButton', function () {
+		browser.assert.elements(OLSKAppToolbarCloudButton, 0);
 	});
 
 	it('hides OLSKAppToolbarLauncherButton', function () {
@@ -201,6 +198,26 @@ describe('OLSKAppToolbar_Access', function () {
 
 		it('shows OLSKAppToolbarFundProgress', function () {
 			browser.assert.elements(OLSKAppToolbarFundProgress, 1);
+		});
+	
+	});
+
+	context('OLSKAppToolbarDispatchCloud', function () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute);
+		});
+
+		it('shows OLSKAppToolbarCloudStatus', function () {
+			browser.assert.elements(OLSKAppToolbarCloudStatus, 1);
+		});
+
+		it('shows OLSKAppToolbarCloudButton', function () {
+			browser.assert.elements(OLSKAppToolbarCloudButton, 1);
+		});
+
+		it('shows OLSKAppToolbarCloudButtonImage', function () {
+			browser.assert.elements(OLSKAppToolbarCloudButtonImage, 1);
 		});
 	
 	});
