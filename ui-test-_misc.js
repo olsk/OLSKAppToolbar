@@ -5,6 +5,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	const item = {
 		OLSKAppToolbarGuideURL: Math.random().toString(),
 		OLSKAppToolbarFundLimitText: Math.random().toString(),
+		OLSKAppToolbarMembershipLimitText: Math.random().toString(),
 	};
 
 	before(function() {
@@ -151,16 +152,34 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarFundProgress', function test_OLSKAppToolbarFundProgress () {
+	describe('OLSKAppToolbarMembershipButton', function test_OLSKAppToolbarMembershipButton () {
 
-		before(function() {
-			return browser.OLSKVisit(kDefaultRoute, {
-				OLSKAppToolbarFundShowProgress: true,
-			});
+		it('classes OLSKDecorPress', function () {
+			browser.assert.hasClass(OLSKAppToolbarMembershipButton, 'OLSKDecorPress');
 		});
 
-		it('sets innerText', function () {
-			browser.assert.text(OLSKAppToolbarFundProgress, '…');
+		context('click', function () {
+
+			before(function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchMembership', '0');
+			});
+
+			before(function () {
+				browser.click(OLSKAppToolbarMembershipButton);
+			});
+		
+			it('sends OLSKAppToolbarDispatchMembership', function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchMembership', '1');
+			});
+		
+		});
+
+	});
+
+	describe('OLSKAppToolbarMembershipLimit', function test_OLSKAppToolbarMembershipLimit () {
+
+		it('binds OLSKAppToolbarMembershipLimitText', function () {
+			browser.assert.text(OLSKAppToolbarMembershipLimit, item.OLSKAppToolbarMembershipLimitText);
 		});
 
 	});

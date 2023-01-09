@@ -2,12 +2,14 @@
 export let OLSKAppToolbarGuideURL = '';
 export let OLSKAppToolbarFundShowProgress = false;
 export let OLSKAppToolbarFundLimitText = '';
+export let OLSKAppToolbarMembershipLimitText = '';
 export let OLSKAppToolbarCloudConnected = false;
 export let OLSKAppToolbarCloudOffline = false;
 export let OLSKAppToolbarCloudError = false;
 export let OLSKAppToolbarDispatchApropos = null;
 export let OLSKAppToolbarDispatchTongue = null;
 export let OLSKAppToolbarDispatchFund = null;
+export let OLSKAppToolbarDispatchMembership = null;
 export let OLSKAppToolbarDispatchCloud = null;
 export let OLSKAppToolbarDispatchLauncher = null;
 
@@ -81,6 +83,15 @@ import OLSKUIAssets from 'OLSKUIAssets';
 			<div class="OLSKAppToolbarFundProgress">…</div>
 		{/if}
 	</div>
+
+	{#if OLSKAppToolbarDispatchMembership }
+		<button class="OLSKAppToolbarMembershipButton OLSKDecorPress" on:click={ OLSKAppToolbarDispatchMembership }>{ OLSKLocalized('OLSKAppToolbarMembershipButtonText') }</button>
+
+		{#if OLSKAppToolbarMembershipLimitText !== '' }
+			<!-- #hotfix svelte rendering issue resolves with button  -->
+			<button class="OLSKAppToolbarMembershipLimit OLSKDecorButtonNoStyle" disabled>{ OLSKAppToolbarMembershipLimitText.toString() }</button>
+		{/if}
+	{/if}
 </div>
 
 <div class="OLSKToolbarElementGroup">

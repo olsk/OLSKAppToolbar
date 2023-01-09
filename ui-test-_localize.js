@@ -31,12 +31,30 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.text(OLSKAppToolbarFundButton, uLocalized('OLSKAppToolbarFundButtonText'));
 		});
 	
+		it('localizes OLSKAppToolbarMembershipButton', function() {
+			browser.assert.text(OLSKAppToolbarMembershipButton, uLocalized('OLSKAppToolbarMembershipButtonText'));
+		});
+	
 		it('localizes OLSKAppToolbarCloudButton', function() {
 			browser.assert.attribute(OLSKAppToolbarCloudButton, 'title', uLocalized('OLSKAppToolbarCloudButtonText'));
 		});
 	
 		it('localizes OLSKAppToolbarLauncherButton', function() {
 			browser.assert.attribute(OLSKAppToolbarLauncherButton, 'title', uLocalized('OLSKAppToolbarLauncherButtonText'));
+		});
+
+		describe('OLSKAppToolbarFundProgress', function test_OLSKAppToolbarFundProgress () {
+
+			before(function() {
+				return browser.OLSKVisit(kDefaultRoute, {
+					OLSKAppToolbarFundShowProgress: true,
+				});
+			});
+
+			it('sets innerText', function () {
+				browser.assert.text(OLSKAppToolbarFundProgress, '…');
+			});
+
 		});
 
 		describe('OLSKAppToolbarCloudStatus', function test_OLSKAppToolbarCloudStatus () {
