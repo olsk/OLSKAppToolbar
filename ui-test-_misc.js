@@ -5,7 +5,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	const item = {
 		OLSKAppToolbarGuideURL: Math.random().toString(),
 		OLSKAppToolbarFundLimitText: Math.random().toString(),
-		OLSKAppToolbarMembershipLimitText: Math.random().toString(),
+		OLSKAppToolbarClubLimitText: Math.random().toString(),
 	};
 
 	before(function() {
@@ -152,34 +152,34 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarMembershipButton', function test_OLSKAppToolbarMembershipButton () {
+	describe('OLSKAppToolbarClubButton', function test_OLSKAppToolbarClubButton () {
 
 		it('classes OLSKDecorPress', function () {
-			browser.assert.hasClass(OLSKAppToolbarMembershipButton, 'OLSKDecorPress');
+			browser.assert.hasClass(OLSKAppToolbarClubButton, 'OLSKDecorPress');
 		});
 
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchMembership', '0');
+				browser.assert.text('#TestOLSKAppToolbarDispatchClub', '0');
 			});
 
 			before(function () {
-				browser.click(OLSKAppToolbarMembershipButton);
+				browser.click(OLSKAppToolbarClubButton);
 			});
 		
-			it('sends OLSKAppToolbarDispatchMembership', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchMembership', '1');
+			it('sends OLSKAppToolbarDispatchClub', function () {
+				browser.assert.text('#TestOLSKAppToolbarDispatchClub', '1');
 			});
 		
 		});
 
 	});
 
-	describe('OLSKAppToolbarMembershipLimit', function test_OLSKAppToolbarMembershipLimit () {
+	describe('OLSKAppToolbarClubLimit', function test_OLSKAppToolbarClubLimit () {
 
-		it('binds OLSKAppToolbarMembershipLimitText', function () {
-			browser.assert.text(OLSKAppToolbarMembershipLimit, item.OLSKAppToolbarMembershipLimitText);
+		it('binds OLSKAppToolbarClubLimitText', function () {
+			browser.assert.text(OLSKAppToolbarClubLimit, item.OLSKAppToolbarClubLimitText);
 		});
 
 	});

@@ -31,8 +31,8 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.text(OLSKAppToolbarFundButton, uLocalized('OLSKAppToolbarFundButtonText'));
 		});
 	
-		it('localizes OLSKAppToolbarMembershipButton', function() {
-			browser.assert.text(OLSKAppToolbarMembershipButton, uLocalized('OLSKAppToolbarMembershipButtonText'));
+		it('localizes OLSKAppToolbarClubButton', function() {
+			browser.assert.text(OLSKAppToolbarClubButton, uLocalized('OLSKAppToolbarClubButtonText'));
 		});
 	
 		it('localizes OLSKAppToolbarCloudButton', function() {
