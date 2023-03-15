@@ -35,7 +35,7 @@
 	margin: 4px;
 }
 
-.OLSKAppToolbarCloudStatusError {
+.OLSKAppToolbarError {
 	color: red !important;
 	font-weight: bold;
 }

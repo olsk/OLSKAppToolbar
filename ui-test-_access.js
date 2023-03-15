@@ -18,6 +18,8 @@ Object.entries({
 	OLSKAppToolbarClubButton: '.OLSKAppToolbarClubButton',
 	OLSKAppToolbarClubLimit: '.OLSKAppToolbarClubLimit',
 	
+	OLSKAppToolbarError: '.OLSKAppToolbarError',
+
 	OLSKAppToolbarCloudStatus: '.OLSKAppToolbarCloudStatus',
 	OLSKAppToolbarCloudButton: '.OLSKAppToolbarCloudButton',
 	OLSKAppToolbarCloudButtonImage: '.OLSKAppToolbarCloudButtonImage',
@@ -79,6 +81,10 @@ describe('OLSKAppToolbar_Access', function () {
 
 	it('hides OLSKAppToolbarClubLimit', function () {
 		browser.assert.elements(OLSKAppToolbarClubLimit, 0);
+	});
+
+	it('hides OLSKAppToolbarError', function () {
+		browser.assert.elements(OLSKAppToolbarError, 0);
 	});
 
 	it('hides OLSKAppToolbarCloudStatus', function () {
@@ -252,6 +258,34 @@ describe('OLSKAppToolbar_Access', function () {
 
 			it('shows OLSKAppToolbarClubLimit', function () {
 				browser.assert.elements(OLSKAppToolbarClubLimit, 1);
+			});
+		
+		});
+	
+	});
+
+	context('OLSKAppToolbarErrorText', function () {
+
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				OLSKAppToolbarErrorText: Math.random().toString(),
+			});
+		});
+
+		it('shows OLSKAppToolbarError', function () {
+			browser.assert.elements(OLSKAppToolbarError, 1);
+		});
+
+		context('falsy', function () {
+			
+			before(function() {
+				return browser.OLSKVisit(kDefaultRoute, {
+					OLSKAppToolbarErrorText: 0,
+				});
+			});
+
+			it('shows OLSKAppToolbarError', function () {
+				browser.assert.elements(OLSKAppToolbarError, 1);
 			});
 		
 		});

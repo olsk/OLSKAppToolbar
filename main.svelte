@@ -3,6 +3,7 @@ export let OLSKAppToolbarGuideURL = '';
 export let OLSKAppToolbarFundShowProgress = false;
 export let OLSKAppToolbarFundLimitText = '';
 export let OLSKAppToolbarClubLimitText = '';
+export let OLSKAppToolbarErrorText = '';
 export let OLSKAppToolbarCloudConnected = false;
 export let OLSKAppToolbarCloudOffline = false;
 export let OLSKAppToolbarCloudError = false;
@@ -95,8 +96,12 @@ import OLSKUIAssets from 'OLSKUIAssets';
 </div>
 
 <div class="OLSKToolbarElementGroup">
+	{#if OLSKAppToolbarErrorText }
+		<div class="OLSKAppToolbarError OLSKDecorBlink">{ OLSKAppToolbarErrorText }</div>
+	{/if}
+
 	{#if OLSKAppToolbarDispatchCloud }
-		<div class="OLSKAppToolbarCloudStatus" class:OLSKAppToolbarCloudStatusError={ OLSKAppToolbarCloudError } class:OLSKDecorBlink={ OLSKAppToolbarCloudError }>{ !OLSKAppToolbarCloudConnected ? '' : (OLSKAppToolbarCloudError ? OLSKLocalized('OLSKAppToolbarCloudStatusError') : (OLSKAppToolbarCloudOffline ? OLSKLocalized('OLSKAppToolbarCloudStatusOffline') : OLSKLocalized('OLSKAppToolbarCloudStatusOnline'))) }</div>
+		<div class="OLSKAppToolbarCloudStatus">{ !OLSKAppToolbarCloudConnected ? '' : (OLSKAppToolbarCloudError ? OLSKLocalized('OLSKAppToolbarCloudStatusError') : (OLSKAppToolbarCloudOffline ? OLSKLocalized('OLSKAppToolbarCloudStatusOffline') : OLSKLocalized('OLSKAppToolbarCloudStatusOnline'))) }</div>
 
 		<button class="OLSKAppToolbarCloudButton OLSKDecorButtonNoStyle OLSKDecorTappable OLSKToolbarButton" title={ OLSKLocalized('OLSKAppToolbarCloudButtonText') } on:click={ OLSKAppToolbarDispatchCloud }>
 			<div class="OLSKAppToolbarCloudButtonImage">{@html OLSKAppToolbarCloudError ? OLSKUIAssets._OLSKSharedCloudError : (OLSKAppToolbarCloudOffline ? OLSKUIAssets._OLSKSharedCloudOffline : OLSKUIAssets._OLSKSharedCloud) }</div>

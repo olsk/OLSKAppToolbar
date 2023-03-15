@@ -6,6 +6,7 @@ describe('OLSKAppToolbar_Misc', function () {
 		OLSKAppToolbarGuideURL: Math.random().toString(),
 		OLSKAppToolbarFundLimitText: Math.random().toString(),
 		OLSKAppToolbarClubLimitText: Math.random().toString(),
+		OLSKAppToolbarErrorText: Math.random().toString(),
 	};
 
 	before(function() {
@@ -184,6 +185,18 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
+	describe('OLSKAppToolbarError', function test_OLSKAppToolbarError () {
+
+		it('binds OLSKAppToolbarErrorText', function () {
+			browser.assert.text(OLSKAppToolbarError, item.OLSKAppToolbarErrorText);
+		});
+
+		it('classes OLSKDecorBlink', function () {
+			browser.assert.hasClass(OLSKAppToolbarError, 'OLSKDecorBlink');
+		});
+
+	});
+
 	describe('OLSKAppToolbarCloudButton', function test_OLSKAppToolbarCloudButton () {
 
 		it('classes OLSKDecorButtonNoStyle', function () {
@@ -250,18 +263,6 @@ describe('OLSKAppToolbar_Misc', function () {
 				browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloudError`, 1);
 			});
 		
-		});
-
-	});
-
-	describe('OLSKAppToolbarCloudStatus', function test_OLSKAppToolbarCloudStatus () {
-
-		it('classes OLSKAppToolbarCloudStatusError', function () {
-			browser.assert.hasClass(OLSKAppToolbarCloudStatus, 'OLSKAppToolbarCloudStatusError');
-		});
-
-		it('classes OLSKDecorBlink', function () {
-			browser.assert.hasClass(OLSKAppToolbarCloudStatus, 'OLSKDecorBlink');
 		});
 
 	});
