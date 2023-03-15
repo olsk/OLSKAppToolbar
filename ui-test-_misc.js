@@ -240,6 +240,7 @@ describe('OLSKAppToolbar_Misc', function () {
 
 			before(function() {
 				return browser.OLSKVisit(kDefaultRoute, {
+					OLSKAppToolbarCloudConnected: true,
 					OLSKAppToolbarCloudOffline: true,
 					OLSKAppToolbarCloudError: true,
 				});
@@ -249,6 +250,18 @@ describe('OLSKAppToolbar_Misc', function () {
 				browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloudError`, 1);
 			});
 		
+		});
+
+	});
+
+	describe('OLSKAppToolbarCloudStatus', function test_OLSKAppToolbarCloudStatus () {
+
+		it('classes OLSKAppToolbarCloudStatusError', function () {
+			browser.assert.hasClass(OLSKAppToolbarCloudStatus, 'OLSKAppToolbarCloudStatusError');
+		});
+
+		it('classes OLSKDecorBlink', function () {
+			browser.assert.hasClass(OLSKAppToolbarCloudStatus, 'OLSKDecorBlink');
 		});
 
 	});
