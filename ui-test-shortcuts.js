@@ -2,18 +2,22 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 describe('OLSKAppToolbar_Shortcuts', function () {
 
+	before(function() {
+		return browser.OLSKVisit(kDefaultRoute);
+	});
+
 	describe('Space', function test_Space () {
 
 		before(function () {
-			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
+			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
 		});
 
 		before(function () {
 			return browser.OLSKFireKeyboardEvent(browser.window, 'Space');
 		});
 		
-		it('sends OLSKAppToolbarDispatchLauncher', function () {
-			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
+		it('sends no OLSKAppToolbarDispatchLauncher', function () {
+			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
 		});
 
 	});
@@ -21,7 +25,7 @@ describe('OLSKAppToolbar_Shortcuts', function () {
 	describe('AltSpace', function test_AltSpace () {
 
 		before(function () {
-			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
+			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
 		});
 
 		before(function () {
@@ -31,7 +35,7 @@ describe('OLSKAppToolbar_Shortcuts', function () {
 		});
 		
 		it('sends OLSKAppToolbarDispatchLauncher', function () {
-			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '2');
+			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
 		});
 
 	});
