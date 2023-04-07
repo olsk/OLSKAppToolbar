@@ -16,15 +16,15 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbar', function test_OLSKAppToolbar () {
 
 		it('classes OLSKToolbar', function () {
-			browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbar');
+			return browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbar');
 		});
 
 		it('classes OLSKToolbarJustify', function () {
-			browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbarJustify');
+			return browser.assert.hasClass(OLSKAppToolbar, 'OLSKToolbarJustify');
 		});
 
 		it('classes OLSKCommonEdgeTop', function () {
-			browser.assert.hasClass(OLSKAppToolbar, 'OLSKCommonEdgeTop');
+			return browser.assert.hasClass(OLSKAppToolbar, 'OLSKCommonEdgeTop');
 		});
 
 	});
@@ -32,21 +32,21 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarAproposButton', function test_OLSKAppToolbarAproposButton () {
 
 		it('classes OLSKDecorButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKDecorButtonNoStyle');
+			return browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKDecorButtonNoStyle');
 		});
 
 		it('classes OLSKDecorTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKDecorTappable');
+			return browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
-			browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKToolbarButton');
+			return browser.assert.hasClass(OLSKAppToolbarAproposButton, 'OLSKToolbarButton');
 		});
 	
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchApropos', '0');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchApropos', '0');
 			});
 
 			before(function () {
@@ -54,7 +54,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 	
 			it('sends OLSKAppToolbarDispatchApropos', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchApropos', '1');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchApropos', '1');
 			});
 	
 		});
@@ -64,7 +64,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarAproposButtonImage', function test_OLSKAppToolbarAproposButtonImage () {
 
 		it('sets src', function () {
-			browser.assert.elements(`${ OLSKAppToolbarAproposButtonImage } #_OLSKSharedApropos`, 1);
+			return browser.assert.elements(`${ OLSKAppToolbarAproposButtonImage } #_OLSKSharedApropos`, 1);
 		});
 
 	});
@@ -72,21 +72,21 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarLanguageButton', function test_OLSKAppToolbarLanguageButton () {
 
 		it('classes OLSKDecorButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKDecorButtonNoStyle');
+			return browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKDecorButtonNoStyle');
 		});
 
 		it('classes OLSKDecorTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKDecorTappable');
+			return browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
-			browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKToolbarButton');
+			return browser.assert.hasClass(OLSKAppToolbarLanguageButton, 'OLSKToolbarButton');
 		});
 	
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchTongue', '0');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchTongue', '0');
 			});
 
 			before(function () {
@@ -94,7 +94,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 	
 			it('sends OLSKAppToolbarDispatchTongue', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchTongue', '1');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchTongue', '1');
 			});
 	
 		});
@@ -104,7 +104,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarLanguageButtonImage', function test_OLSKAppToolbarLanguageButtonImage () {
 
 		it('sets src', function () {
-			browser.assert.elements(`${ OLSKAppToolbarLanguageButtonImage } #_OLSKSharedLanguage`, 1);
+			return browser.assert.elements(`${ OLSKAppToolbarLanguageButtonImage } #_OLSKSharedLanguage`, 1);
 		});
 
 	});
@@ -112,11 +112,11 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarGuideLink', function test_OLSKAppToolbarGuideLink () {
 
 		it('sets href', function () {
-			browser.assert.attribute(OLSKAppToolbarGuideLink, 'href', item.OLSKAppToolbarGuideURL);
+			return browser.assert.attribute(OLSKAppToolbarGuideLink, 'href', item.OLSKAppToolbarGuideURL);
 		});
 
 		it('sets target', function () {
-			browser.assert.attribute(OLSKAppToolbarGuideLink, 'target', '_blank');
+			return browser.assert.attribute(OLSKAppToolbarGuideLink, 'target', '_blank');
 		});
 
 	});
@@ -124,13 +124,13 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarFundButton', function test_OLSKAppToolbarFundButton () {
 
 		it('classes OLSKDecorPress', function () {
-			browser.assert.hasClass(OLSKAppToolbarFundButton, 'OLSKDecorPress');
+			return browser.assert.hasClass(OLSKAppToolbarFundButton, 'OLSKDecorPress');
 		});
 
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchFund', '0');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchFund', '0');
 			});
 
 			before(function () {
@@ -138,7 +138,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 		
 			it('sends OLSKAppToolbarDispatchFund', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchFund', '1');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchFund', '1');
 			});
 		
 		});
@@ -148,7 +148,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarFundLimit', function test_OLSKAppToolbarFundLimit () {
 
 		it('binds OLSKAppToolbarFundLimitText', function () {
-			browser.assert.text(OLSKAppToolbarFundLimit, item.OLSKAppToolbarFundLimitText);
+			return browser.assert.text(OLSKAppToolbarFundLimit, item.OLSKAppToolbarFundLimitText);
 		});
 
 	});
@@ -156,13 +156,13 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarClubButton', function test_OLSKAppToolbarClubButton () {
 
 		it('classes OLSKDecorPress', function () {
-			browser.assert.hasClass(OLSKAppToolbarClubButton, 'OLSKDecorPress');
+			return browser.assert.hasClass(OLSKAppToolbarClubButton, 'OLSKDecorPress');
 		});
 
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchClub', '0');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchClub', '0');
 			});
 
 			before(function () {
@@ -170,7 +170,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 		
 			it('sends OLSKAppToolbarDispatchClub', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchClub', '1');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchClub', '1');
 			});
 		
 		});
@@ -180,7 +180,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarClubLimit', function test_OLSKAppToolbarClubLimit () {
 
 		it('binds OLSKAppToolbarClubLimitText', function () {
-			browser.assert.text(OLSKAppToolbarClubLimit, item.OLSKAppToolbarClubLimitText);
+			return browser.assert.text(OLSKAppToolbarClubLimit, item.OLSKAppToolbarClubLimitText);
 		});
 
 	});
@@ -188,11 +188,11 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarError', function test_OLSKAppToolbarError () {
 
 		it('binds OLSKAppToolbarErrorText', function () {
-			browser.assert.text(OLSKAppToolbarError, item.OLSKAppToolbarErrorText);
+			return browser.assert.text(OLSKAppToolbarError, item.OLSKAppToolbarErrorText);
 		});
 
 		it('classes OLSKDecorBlink', function () {
-			browser.assert.hasClass(OLSKAppToolbarError, 'OLSKDecorBlink');
+			return browser.assert.hasClass(OLSKAppToolbarError, 'OLSKDecorBlink');
 		});
 
 	});
@@ -200,21 +200,21 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarCloudButton', function test_OLSKAppToolbarCloudButton () {
 
 		it('classes OLSKDecorButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKDecorButtonNoStyle');
+			return browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKDecorButtonNoStyle');
 		});
 
 		it('classes OLSKDecorTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKDecorTappable');
+			return browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
-			browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKToolbarButton');
+			return browser.assert.hasClass(OLSKAppToolbarCloudButton, 'OLSKToolbarButton');
 		});
 	
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchCloud', '0');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchCloud', '0');
 			});
 
 			before(function () {
@@ -222,7 +222,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 	
 			it('sends OLSKAppToolbarDispatchCloud', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchCloud', '1');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchCloud', '1');
 			});
 	
 		});
@@ -232,7 +232,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarCloudButtonImage', function test_OLSKAppToolbarCloudButtonImage () {
 
 		it('sets src', function () {
-			browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloud`, 1);
+			return browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloud`, 1);
 		});
 
 		context('offline', function () {
@@ -244,7 +244,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 
 			it('sets src', function () {
-				browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloudOffline`, 1);
+				return browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloudOffline`, 1);
 			});
 		
 		});
@@ -260,7 +260,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 
 			it('sets src', function () {
-				browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloudError`, 1);
+				return browser.assert.elements(`${ OLSKAppToolbarCloudButtonImage } #_OLSKSharedCloudError`, 1);
 			});
 		
 		});
@@ -270,21 +270,21 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarLauncherButton', function test_OLSKAppToolbarLauncherButton () {
 
 		it('classes OLSKDecorButtonNoStyle', function () {
-			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKDecorButtonNoStyle');
+			return browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKDecorButtonNoStyle');
 		});
 
 		it('classes OLSKDecorTappable', function () {
-			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKDecorTappable');
+			return browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKDecorTappable');
 		});
 
 		it('classes OLSKToolbarButton', function () {
-			browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKToolbarButton');
+			return browser.assert.hasClass(OLSKAppToolbarLauncherButton, 'OLSKToolbarButton');
 		});
 	
 		context('click', function () {
 
 			before(function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
 			});
 
 			before(function () {
@@ -292,7 +292,7 @@ describe('OLSKAppToolbar_Misc', function () {
 			});
 	
 			it('sends OLSKAppToolbarDispatchLauncher', function () {
-				browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
+				return browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
 			});
 	
 		});
@@ -302,7 +302,7 @@ describe('OLSKAppToolbar_Misc', function () {
 	describe('OLSKAppToolbarLauncherButtonImage', function test_OLSKAppToolbarLauncherButtonImage () {
 	
 		it('sets src', function () {
-			browser.assert.elements(`${ OLSKAppToolbarLauncherButtonImage } #_OLSKSharedLauncher`, 1);
+			return browser.assert.elements(`${ OLSKAppToolbarLauncherButtonImage } #_OLSKSharedLauncher`, 1);
 		});
 
 	});

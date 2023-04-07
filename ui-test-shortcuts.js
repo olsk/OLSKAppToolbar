@@ -9,7 +9,7 @@ describe('OLSKAppToolbar_Shortcuts', function () {
 	describe('Space', function test_Space () {
 
 		before(function () {
-			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
+			return browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
 		});
 
 		before(function () {
@@ -17,7 +17,7 @@ describe('OLSKAppToolbar_Shortcuts', function () {
 		});
 		
 		it('sends no OLSKAppToolbarDispatchLauncher', function () {
-			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
+			return browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
 		});
 
 	});
@@ -25,7 +25,7 @@ describe('OLSKAppToolbar_Shortcuts', function () {
 	describe('AltSpace', function test_AltSpace () {
 
 		before(function () {
-			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
+			return browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '0');
 		});
 
 		before(function () {
@@ -35,7 +35,7 @@ describe('OLSKAppToolbar_Shortcuts', function () {
 		});
 		
 		it('sends OLSKAppToolbarDispatchLauncher', function () {
-			browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
+			return browser.assert.text('#TestOLSKAppToolbarDispatchLauncher', '1');
 		});
 
 	});

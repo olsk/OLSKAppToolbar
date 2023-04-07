@@ -16,31 +16,31 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 		});
 	
 		it('localizes OLSKAppToolbarAproposButton', function() {
-			browser.assert.attribute(OLSKAppToolbarAproposButton, 'title', uLocalized('OLSKAppToolbarAproposButtonText'));
+			return browser.assert.attribute(OLSKAppToolbarAproposButton, 'title', uLocalized('OLSKAppToolbarAproposButtonText'));
 		});
 
 		it('localizes OLSKAppToolbarLanguageButton', function() {
-			browser.assert.attribute(OLSKAppToolbarLanguageButton, 'title', uLocalized('OLSKAppToolbarLanguageButtonText'));
+			return browser.assert.attribute(OLSKAppToolbarLanguageButton, 'title', uLocalized('OLSKAppToolbarLanguageButtonText'));
 		});
 
 		it('localizes OLSKAppToolbarGuideLink', function() {
-			browser.assert.text(OLSKAppToolbarGuideLink, uLocalized('OLSKAppToolbarGuideLinkText'));
+			return browser.assert.text(OLSKAppToolbarGuideLink, uLocalized('OLSKAppToolbarGuideLinkText'));
 		});
 	
 		it('localizes OLSKAppToolbarFundButton', function() {
-			browser.assert.text(OLSKAppToolbarFundButton, uLocalized('OLSKAppToolbarFundButtonText'));
+			return browser.assert.text(OLSKAppToolbarFundButton, uLocalized('OLSKAppToolbarFundButtonText'));
 		});
 	
 		it('localizes OLSKAppToolbarClubButton', function() {
-			browser.assert.text(OLSKAppToolbarClubButton, uLocalized('OLSKAppToolbarClubButtonText'));
+			return browser.assert.text(OLSKAppToolbarClubButton, uLocalized('OLSKAppToolbarClubButtonText'));
 		});
 	
 		it('localizes OLSKAppToolbarCloudButton', function() {
-			browser.assert.attribute(OLSKAppToolbarCloudButton, 'title', uLocalized('OLSKAppToolbarCloudButtonText'));
+			return browser.assert.attribute(OLSKAppToolbarCloudButton, 'title', uLocalized('OLSKAppToolbarCloudButtonText'));
 		});
 	
 		it('localizes OLSKAppToolbarLauncherButton', function() {
-			browser.assert.attribute(OLSKAppToolbarLauncherButton, 'title', uLocalized('OLSKAppToolbarLauncherButtonText'));
+			return browser.assert.attribute(OLSKAppToolbarLauncherButton, 'title', uLocalized('OLSKAppToolbarLauncherButtonText'));
 		});
 
 		describe('OLSKAppToolbarFundProgress', function test_OLSKAppToolbarFundProgress () {
@@ -52,7 +52,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			});
 
 			it('sets innerText', function () {
-				browser.assert.text(OLSKAppToolbarFundProgress, '…');
+				return browser.assert.text(OLSKAppToolbarFundProgress, '…');
 			});
 
 		});
@@ -60,7 +60,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 		describe('OLSKAppToolbarCloudStatus', function test_OLSKAppToolbarCloudStatus () {
 
 			it('sets text', function () {
-				browser.assert.text(OLSKAppToolbarCloudStatus, '');
+				return browser.assert.text(OLSKAppToolbarCloudStatus, '');
 			});
 
 			context('online', function () {
@@ -73,7 +73,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 				});
 
 				it('sets src', function () {
-					browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusOnline'));
+					return browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusOnline'));
 				});
 			
 			});
@@ -89,7 +89,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 				});
 
 				it('sets src', function () {
-					browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusOffline'));
+					return browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusOffline'));
 				});
 			
 			});
@@ -106,7 +106,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 				});
 
 				it('sets src', function () {
-					browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusError'));
+					return browser.assert.text(OLSKAppToolbarCloudStatus, uLocalized('OLSKAppToolbarCloudStatusError'));
 				});
 			
 			});
