@@ -27,8 +27,8 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			return browser.assert.text(OLSKAppToolbarGuideLink, uLocalized('OLSKAppToolbarGuideLinkText'));
 		});
 	
-		it('localizes OLSKAppToolbarFundButton', function() {
-			return browser.assert.text(OLSKAppToolbarFundButton, uLocalized('OLSKAppToolbarFundButtonText'));
+		it('localizes OLSKAppToolbarFundLink', function() {
+			return browser.assert.text(OLSKAppToolbarFundLink, uLocalized('OLSKAppToolbarFundLinkText'));
 		});
 	
 		it('localizes OLSKAppToolbarClubButton', function() {
@@ -41,20 +41,6 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 	
 		it('localizes OLSKAppToolbarLauncherButton', function() {
 			return browser.assert.attribute(OLSKAppToolbarLauncherButton, 'title', uLocalized('OLSKAppToolbarLauncherButtonText'));
-		});
-
-		describe('OLSKAppToolbarFundProgress', function test_OLSKAppToolbarFundProgress () {
-
-			before(function() {
-				return browser.OLSKVisit(kDefaultRoute, {
-					OLSKAppToolbarFundShowProgress: true,
-				});
-			});
-
-			it('sets innerText', function () {
-				return browser.assert.text(OLSKAppToolbarFundProgress, '…');
-			});
-
 		});
 
 		describe('OLSKAppToolbarCloudStatus', function test_OLSKAppToolbarCloudStatus () {

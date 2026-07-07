@@ -6,7 +6,7 @@
 	justify-content: space-between;
 }
 
-.OLSKAppToolbar *:not(.OLSKAppToolbarFundButton) {
+.OLSKAppToolbar *:not(.OLSKAppToolbarFundLink) {
 	color: var(--OLSKCommonForeground);	
 }
 
@@ -21,18 +21,6 @@
 
 .OLSKAppToolbar :global(.OLSKToolbarElementGroup > *:not(:first-child)) {
 	margin-left: 10px;
-}
-
-.OLSKAppToolbarFundButton {
-	padding: 2px 4px;
-
-	/* #hotfix .OLSKToolbarElementGroup button */
-	margin: 0;
-}
-
-.OLSKAppToolbarFundLimit {	
-	/* #hotfix .OLSKToolbarElementGroup button */
-	margin: 4px;
 }
 
 .OLSKAppToolbarError {

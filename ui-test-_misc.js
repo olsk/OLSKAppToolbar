@@ -4,7 +4,6 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	const item = {
 		OLSKAppToolbarGuideURL: Math.random().toString(),
-		OLSKAppToolbarFundLimitText: Math.random().toString(),
 		OLSKAppToolbarClubLimitText: Math.random().toString(),
 		OLSKAppToolbarErrorText: Math.random().toString(),
 	};
@@ -121,34 +120,14 @@ describe('OLSKAppToolbar_Misc', function () {
 
 	});
 
-	describe('OLSKAppToolbarFundButton', function test_OLSKAppToolbarFundButton () {
+	describe('OLSKAppToolbarFundLink', function test_OLSKAppToolbarFundLink () {
 
-		it('classes OLSKDecorPress', function () {
-			return browser.assert.hasClass(OLSKAppToolbarFundButton, 'OLSKDecorPress');
+		it('sets href', function () {
+			return browser.assert.attribute(OLSKAppToolbarFundLink, 'href', 'https://rosano.ca/fund');
 		});
 
-		context('click', function () {
-
-			before(function () {
-				return browser.assert.text('#TestOLSKAppToolbarDispatchFund', '0');
-			});
-
-			before(function () {
-				browser.click(OLSKAppToolbarFundButton);
-			});
-		
-			it('sends OLSKAppToolbarDispatchFund', function () {
-				return browser.assert.text('#TestOLSKAppToolbarDispatchFund', '1');
-			});
-		
-		});
-
-	});
-
-	describe('OLSKAppToolbarFundLimit', function test_OLSKAppToolbarFundLimit () {
-
-		it('binds OLSKAppToolbarFundLimitText', function () {
-			return browser.assert.text(OLSKAppToolbarFundLimit, item.OLSKAppToolbarFundLimitText);
+		it('sets target', function () {
+			return browser.assert.attribute(OLSKAppToolbarFundLink, 'target', '_blank');
 		});
 
 	});

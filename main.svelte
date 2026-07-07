@@ -1,7 +1,5 @@
 <script>
 export let OLSKAppToolbarGuideURL = '';
-export let OLSKAppToolbarFundShowProgress = false;
-export let OLSKAppToolbarFundLimitText = '';
 export let OLSKAppToolbarClubLimitText = '';
 export let OLSKAppToolbarErrorText = '';
 export let OLSKAppToolbarCloudConnected = false;
@@ -9,7 +7,6 @@ export let OLSKAppToolbarCloudOffline = false;
 export let OLSKAppToolbarCloudError = false;
 export let OLSKAppToolbarDispatchApropos = null;
 export let OLSKAppToolbarDispatchTongue = null;
-export let OLSKAppToolbarDispatchFund = null;
 export let OLSKAppToolbarDispatchClub = null;
 export let OLSKAppToolbarDispatchCloud = null;
 export let OLSKAppToolbarDispatchLauncher = null;
@@ -69,18 +66,7 @@ import OLSKUIAssets from 'OLSKUIAssets';
 
 <div class="OLSKToolbarElementGroup">
 	<div class="OLSKAppToolbarFund">
-		{#if OLSKAppToolbarDispatchFund && !OLSKAppToolbarFundShowProgress }
-			<button class="OLSKAppToolbarFundButton OLSKDecorPress" on:click={ OLSKAppToolbarDispatchFund }>{ OLSKLocalized('OLSKAppToolbarFundButtonText') }</button>
-
-			{#if OLSKAppToolbarFundLimitText !== '' }
-				<!-- #hotfix svelte rendering issue resolves with button  -->
-				<button class="OLSKAppToolbarFundLimit OLSKDecorButtonNoStyle" disabled>{ OLSKAppToolbarFundLimitText.toString() }</button>
-			{/if}
-		{/if}
-
-		{#if OLSKAppToolbarFundShowProgress }
-			<div class="OLSKAppToolbarFundProgress">…</div>
-		{/if}
+		<a class="OLSKAppToolbarFundLink" href="https://rosano.ca/fund" target="_blank" rel="noreferrer">{ OLSKLocalized('OLSKAppToolbarFundLinkText') }</a>
 	</div>
 
 	{#if OLSKAppToolbarDispatchClub }
