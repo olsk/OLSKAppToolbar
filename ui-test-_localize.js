@@ -28,7 +28,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 		});
 	
 		it('localizes OLSKAppToolbarFundLink', function() {
-			return browser.assert.text(OLSKAppToolbarFundLink, uLocalized('OLSKAppToolbarFundLinkText'));
+			return browser.assert.text(OLSKAppToolbarFundLink, 'Become a patron' || uLocalized('OLSKAppToolbarFundLinkText'));
 		});
 	
 		it('localizes OLSKAppToolbarClubButton', function() {

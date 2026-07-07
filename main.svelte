@@ -66,7 +66,7 @@ import OLSKUIAssets from 'OLSKUIAssets';
 
 <div class="OLSKToolbarElementGroup">
 	<div class="OLSKAppToolbarFund">
-		<a class="OLSKAppToolbarFundLink" href="https://rosano.ca/fund" target="_blank" rel="noreferrer">{ OLSKLocalized('OLSKAppToolbarFundLinkText') }</a>
+		<a class="OLSKAppToolbarFundLink" href="https://rosano.ca/fund" target="_blank" rel="noreferrer">{ 'Become a patron' || OLSKLocalized('OLSKAppToolbarFundLinkText') }</a>
 	</div>
 
 	{#if OLSKAppToolbarDispatchClub }
